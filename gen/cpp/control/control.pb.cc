@@ -4,370 +4,290 @@
 #include "control/control.pb.h"
 
 #include <algorithm>
-#include "google/protobuf/io/coded_stream.h"
-#include "google/protobuf/extension_set.h"
-#include "google/protobuf/wire_format_lite.h"
-#include "google/protobuf/descriptor.h"
-#include "google/protobuf/generated_message_reflection.h"
-#include "google/protobuf/reflection_ops.h"
-#include "google/protobuf/wire_format.h"
-#include "google/protobuf/generated_message_tctable_impl.h"
-// @@protoc_insertion_point(includes)
 
-// Must be included last.
-#include "google/protobuf/port_def.inc"
+#include <google/protobuf/io/coded_stream.h>
+#include <google/protobuf/extension_set.h>
+#include <google/protobuf/wire_format_lite.h>
+#include <google/protobuf/descriptor.h>
+#include <google/protobuf/generated_message_reflection.h>
+#include <google/protobuf/reflection_ops.h>
+#include <google/protobuf/wire_format.h>
+// @@protoc_insertion_point(includes)
+#include <google/protobuf/port_def.inc>
+
 PROTOBUF_PRAGMA_INIT_SEG
-namespace _pb = ::google::protobuf;
-namespace _pbi = ::google::protobuf::internal;
-namespace _fl = ::google::protobuf::internal::field_layout;
-namespace longportapp {
+
+namespace _pb = ::PROTOBUF_NAMESPACE_ID;
+namespace _pbi = _pb::internal;
+
+namespace longbridge {
 namespace control {
 namespace v1 {
-        template <typename>
-PROTOBUF_CONSTEXPR Close::Close(::_pbi::ConstantInitialized)
-    : _impl_{
-      /*decltype(_impl_.reason_)*/ {
-          &::_pbi::fixed_address_empty_string,
-          ::_pbi::ConstantInitialized{},
-      },
-      /*decltype(_impl_.code_)*/ 0,
-      /*decltype(_impl_._cached_size_)*/ {},
-    } {}
+PROTOBUF_CONSTEXPR Close::Close(
+    ::_pbi::ConstantInitialized)
+  : reason_(&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{})
+  , code_(0)
+{}
 struct CloseDefaultTypeInternal {
-  PROTOBUF_CONSTEXPR CloseDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
+  PROTOBUF_CONSTEXPR CloseDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
   ~CloseDefaultTypeInternal() {}
   union {
     Close _instance;
   };
 };
-
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
-    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 CloseDefaultTypeInternal _Close_default_instance_;
-        template <typename>
-PROTOBUF_CONSTEXPR Heartbeat::Heartbeat(::_pbi::ConstantInitialized)
-    : _impl_{
-      /*decltype(_impl_._has_bits_)*/ {},
-      /*decltype(_impl_._cached_size_)*/ {},
-      /*decltype(_impl_.timestamp_)*/ ::int64_t{0},
-      /*decltype(_impl_.heartbeat_id_)*/ 0,
-    } {}
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 CloseDefaultTypeInternal _Close_default_instance_;
+PROTOBUF_CONSTEXPR Heartbeat::Heartbeat(
+    ::_pbi::ConstantInitialized)
+  : timestamp_(int64_t{0})
+  , heartbeat_id_(0){}
 struct HeartbeatDefaultTypeInternal {
-  PROTOBUF_CONSTEXPR HeartbeatDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
+  PROTOBUF_CONSTEXPR HeartbeatDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
   ~HeartbeatDefaultTypeInternal() {}
   union {
     Heartbeat _instance;
   };
 };
-
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
-    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 HeartbeatDefaultTypeInternal _Heartbeat_default_instance_;
-      template <typename>
-PROTOBUF_CONSTEXPR AuthRequest_MetadataEntry_DoNotUse::AuthRequest_MetadataEntry_DoNotUse(::_pbi::ConstantInitialized) {}
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 HeartbeatDefaultTypeInternal _Heartbeat_default_instance_;
+PROTOBUF_CONSTEXPR AuthRequest_MetadataEntry_DoNotUse::AuthRequest_MetadataEntry_DoNotUse(
+    ::_pbi::ConstantInitialized){}
 struct AuthRequest_MetadataEntry_DoNotUseDefaultTypeInternal {
-  PROTOBUF_CONSTEXPR AuthRequest_MetadataEntry_DoNotUseDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
+  PROTOBUF_CONSTEXPR AuthRequest_MetadataEntry_DoNotUseDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
   ~AuthRequest_MetadataEntry_DoNotUseDefaultTypeInternal() {}
   union {
     AuthRequest_MetadataEntry_DoNotUse _instance;
   };
 };
-
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
-    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 AuthRequest_MetadataEntry_DoNotUseDefaultTypeInternal _AuthRequest_MetadataEntry_DoNotUse_default_instance_;
-        template <typename>
-PROTOBUF_CONSTEXPR AuthRequest::AuthRequest(::_pbi::ConstantInitialized)
-    : _impl_{
-      /* decltype(_impl_.metadata_) */ {},
-      /*decltype(_impl_.token_)*/ {
-          &::_pbi::fixed_address_empty_string,
-          ::_pbi::ConstantInitialized{},
-      },
-      /*decltype(_impl_._cached_size_)*/ {},
-    } {}
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 AuthRequest_MetadataEntry_DoNotUseDefaultTypeInternal _AuthRequest_MetadataEntry_DoNotUse_default_instance_;
+PROTOBUF_CONSTEXPR AuthRequest::AuthRequest(
+    ::_pbi::ConstantInitialized)
+  : metadata_(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{})
+  , token_(&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}){}
 struct AuthRequestDefaultTypeInternal {
-  PROTOBUF_CONSTEXPR AuthRequestDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
+  PROTOBUF_CONSTEXPR AuthRequestDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
   ~AuthRequestDefaultTypeInternal() {}
   union {
     AuthRequest _instance;
   };
 };
-
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
-    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 AuthRequestDefaultTypeInternal _AuthRequest_default_instance_;
-        template <typename>
-PROTOBUF_CONSTEXPR AuthResponse::AuthResponse(::_pbi::ConstantInitialized)
-    : _impl_{
-      /*decltype(_impl_.session_id_)*/ {
-          &::_pbi::fixed_address_empty_string,
-          ::_pbi::ConstantInitialized{},
-      },
-      /*decltype(_impl_.expires_)*/ ::int64_t{0},
-      /*decltype(_impl_.limit_)*/ 0u,
-      /*decltype(_impl_.online_)*/ 0u,
-      /*decltype(_impl_._cached_size_)*/ {},
-    } {}
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 AuthRequestDefaultTypeInternal _AuthRequest_default_instance_;
+PROTOBUF_CONSTEXPR AuthResponse::AuthResponse(
+    ::_pbi::ConstantInitialized)
+  : session_id_(&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{})
+  , expires_(int64_t{0})
+  , limit_(0u)
+  , online_(0u){}
 struct AuthResponseDefaultTypeInternal {
-  PROTOBUF_CONSTEXPR AuthResponseDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
+  PROTOBUF_CONSTEXPR AuthResponseDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
   ~AuthResponseDefaultTypeInternal() {}
   union {
     AuthResponse _instance;
   };
 };
-
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
-    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 AuthResponseDefaultTypeInternal _AuthResponse_default_instance_;
-      template <typename>
-PROTOBUF_CONSTEXPR ReconnectRequest_MetadataEntry_DoNotUse::ReconnectRequest_MetadataEntry_DoNotUse(::_pbi::ConstantInitialized) {}
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 AuthResponseDefaultTypeInternal _AuthResponse_default_instance_;
+PROTOBUF_CONSTEXPR ReconnectRequest_MetadataEntry_DoNotUse::ReconnectRequest_MetadataEntry_DoNotUse(
+    ::_pbi::ConstantInitialized){}
 struct ReconnectRequest_MetadataEntry_DoNotUseDefaultTypeInternal {
-  PROTOBUF_CONSTEXPR ReconnectRequest_MetadataEntry_DoNotUseDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
+  PROTOBUF_CONSTEXPR ReconnectRequest_MetadataEntry_DoNotUseDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
   ~ReconnectRequest_MetadataEntry_DoNotUseDefaultTypeInternal() {}
   union {
     ReconnectRequest_MetadataEntry_DoNotUse _instance;
   };
 };
-
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
-    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 ReconnectRequest_MetadataEntry_DoNotUseDefaultTypeInternal _ReconnectRequest_MetadataEntry_DoNotUse_default_instance_;
-        template <typename>
-PROTOBUF_CONSTEXPR ReconnectRequest::ReconnectRequest(::_pbi::ConstantInitialized)
-    : _impl_{
-      /* decltype(_impl_.metadata_) */ {},
-      /*decltype(_impl_.session_id_)*/ {
-          &::_pbi::fixed_address_empty_string,
-          ::_pbi::ConstantInitialized{},
-      },
-      /*decltype(_impl_._cached_size_)*/ {},
-    } {}
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 ReconnectRequest_MetadataEntry_DoNotUseDefaultTypeInternal _ReconnectRequest_MetadataEntry_DoNotUse_default_instance_;
+PROTOBUF_CONSTEXPR ReconnectRequest::ReconnectRequest(
+    ::_pbi::ConstantInitialized)
+  : metadata_(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{})
+  , session_id_(&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}){}
 struct ReconnectRequestDefaultTypeInternal {
-  PROTOBUF_CONSTEXPR ReconnectRequestDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
+  PROTOBUF_CONSTEXPR ReconnectRequestDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
   ~ReconnectRequestDefaultTypeInternal() {}
   union {
     ReconnectRequest _instance;
   };
 };
-
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
-    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 ReconnectRequestDefaultTypeInternal _ReconnectRequest_default_instance_;
-        template <typename>
-PROTOBUF_CONSTEXPR ReconnectResponse::ReconnectResponse(::_pbi::ConstantInitialized)
-    : _impl_{
-      /*decltype(_impl_.session_id_)*/ {
-          &::_pbi::fixed_address_empty_string,
-          ::_pbi::ConstantInitialized{},
-      },
-      /*decltype(_impl_.expires_)*/ ::int64_t{0},
-      /*decltype(_impl_.limit_)*/ 0u,
-      /*decltype(_impl_.online_)*/ 0u,
-      /*decltype(_impl_._cached_size_)*/ {},
-    } {}
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 ReconnectRequestDefaultTypeInternal _ReconnectRequest_default_instance_;
+PROTOBUF_CONSTEXPR ReconnectResponse::ReconnectResponse(
+    ::_pbi::ConstantInitialized)
+  : session_id_(&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{})
+  , expires_(int64_t{0})
+  , limit_(0u)
+  , online_(0u){}
 struct ReconnectResponseDefaultTypeInternal {
-  PROTOBUF_CONSTEXPR ReconnectResponseDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
+  PROTOBUF_CONSTEXPR ReconnectResponseDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
   ~ReconnectResponseDefaultTypeInternal() {}
   union {
     ReconnectResponse _instance;
   };
 };
-
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
-    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 ReconnectResponseDefaultTypeInternal _ReconnectResponse_default_instance_;
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 ReconnectResponseDefaultTypeInternal _ReconnectResponse_default_instance_;
 }  // namespace v1
 }  // namespace control
-}  // namespace longportapp
+}  // namespace longbridge
 static ::_pb::Metadata file_level_metadata_control_2fcontrol_2eproto[8];
 static const ::_pb::EnumDescriptor* file_level_enum_descriptors_control_2fcontrol_2eproto[2];
-static constexpr const ::_pb::ServiceDescriptor**
-    file_level_service_descriptors_control_2fcontrol_2eproto = nullptr;
-const ::uint32_t TableStruct_control_2fcontrol_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(
-    protodesc_cold) = {
-    ~0u,  // no _has_bits_
-    PROTOBUF_FIELD_OFFSET(::longportapp::control::v1::Close, _internal_metadata_),
-    ~0u,  // no _extensions_
-    ~0u,  // no _oneof_case_
-    ~0u,  // no _weak_field_map_
-    ~0u,  // no _inlined_string_donated_
-    ~0u,  // no _split_
-    ~0u,  // no sizeof(Split)
-    PROTOBUF_FIELD_OFFSET(::longportapp::control::v1::Close, _impl_.code_),
-    PROTOBUF_FIELD_OFFSET(::longportapp::control::v1::Close, _impl_.reason_),
-    PROTOBUF_FIELD_OFFSET(::longportapp::control::v1::Heartbeat, _impl_._has_bits_),
-    PROTOBUF_FIELD_OFFSET(::longportapp::control::v1::Heartbeat, _internal_metadata_),
-    ~0u,  // no _extensions_
-    ~0u,  // no _oneof_case_
-    ~0u,  // no _weak_field_map_
-    ~0u,  // no _inlined_string_donated_
-    ~0u,  // no _split_
-    ~0u,  // no sizeof(Split)
-    PROTOBUF_FIELD_OFFSET(::longportapp::control::v1::Heartbeat, _impl_.timestamp_),
-    PROTOBUF_FIELD_OFFSET(::longportapp::control::v1::Heartbeat, _impl_.heartbeat_id_),
-    ~0u,
-    0,
-    PROTOBUF_FIELD_OFFSET(::longportapp::control::v1::AuthRequest_MetadataEntry_DoNotUse, _has_bits_),
-    PROTOBUF_FIELD_OFFSET(::longportapp::control::v1::AuthRequest_MetadataEntry_DoNotUse, _internal_metadata_),
-    ~0u,  // no _extensions_
-    ~0u,  // no _oneof_case_
-    ~0u,  // no _weak_field_map_
-    ~0u,  // no _inlined_string_donated_
-    ~0u,  // no _split_
-    ~0u,  // no sizeof(Split)
-    PROTOBUF_FIELD_OFFSET(::longportapp::control::v1::AuthRequest_MetadataEntry_DoNotUse, key_),
-    PROTOBUF_FIELD_OFFSET(::longportapp::control::v1::AuthRequest_MetadataEntry_DoNotUse, value_),
-    0,
-    1,
-    ~0u,  // no _has_bits_
-    PROTOBUF_FIELD_OFFSET(::longportapp::control::v1::AuthRequest, _internal_metadata_),
-    ~0u,  // no _extensions_
-    ~0u,  // no _oneof_case_
-    ~0u,  // no _weak_field_map_
-    ~0u,  // no _inlined_string_donated_
-    ~0u,  // no _split_
-    ~0u,  // no sizeof(Split)
-    PROTOBUF_FIELD_OFFSET(::longportapp::control::v1::AuthRequest, _impl_.token_),
-    PROTOBUF_FIELD_OFFSET(::longportapp::control::v1::AuthRequest, _impl_.metadata_),
-    ~0u,  // no _has_bits_
-    PROTOBUF_FIELD_OFFSET(::longportapp::control::v1::AuthResponse, _internal_metadata_),
-    ~0u,  // no _extensions_
-    ~0u,  // no _oneof_case_
-    ~0u,  // no _weak_field_map_
-    ~0u,  // no _inlined_string_donated_
-    ~0u,  // no _split_
-    ~0u,  // no sizeof(Split)
-    PROTOBUF_FIELD_OFFSET(::longportapp::control::v1::AuthResponse, _impl_.session_id_),
-    PROTOBUF_FIELD_OFFSET(::longportapp::control::v1::AuthResponse, _impl_.expires_),
-    PROTOBUF_FIELD_OFFSET(::longportapp::control::v1::AuthResponse, _impl_.limit_),
-    PROTOBUF_FIELD_OFFSET(::longportapp::control::v1::AuthResponse, _impl_.online_),
-    PROTOBUF_FIELD_OFFSET(::longportapp::control::v1::ReconnectRequest_MetadataEntry_DoNotUse, _has_bits_),
-    PROTOBUF_FIELD_OFFSET(::longportapp::control::v1::ReconnectRequest_MetadataEntry_DoNotUse, _internal_metadata_),
-    ~0u,  // no _extensions_
-    ~0u,  // no _oneof_case_
-    ~0u,  // no _weak_field_map_
-    ~0u,  // no _inlined_string_donated_
-    ~0u,  // no _split_
-    ~0u,  // no sizeof(Split)
-    PROTOBUF_FIELD_OFFSET(::longportapp::control::v1::ReconnectRequest_MetadataEntry_DoNotUse, key_),
-    PROTOBUF_FIELD_OFFSET(::longportapp::control::v1::ReconnectRequest_MetadataEntry_DoNotUse, value_),
-    0,
-    1,
-    ~0u,  // no _has_bits_
-    PROTOBUF_FIELD_OFFSET(::longportapp::control::v1::ReconnectRequest, _internal_metadata_),
-    ~0u,  // no _extensions_
-    ~0u,  // no _oneof_case_
-    ~0u,  // no _weak_field_map_
-    ~0u,  // no _inlined_string_donated_
-    ~0u,  // no _split_
-    ~0u,  // no sizeof(Split)
-    PROTOBUF_FIELD_OFFSET(::longportapp::control::v1::ReconnectRequest, _impl_.session_id_),
-    PROTOBUF_FIELD_OFFSET(::longportapp::control::v1::ReconnectRequest, _impl_.metadata_),
-    ~0u,  // no _has_bits_
-    PROTOBUF_FIELD_OFFSET(::longportapp::control::v1::ReconnectResponse, _internal_metadata_),
-    ~0u,  // no _extensions_
-    ~0u,  // no _oneof_case_
-    ~0u,  // no _weak_field_map_
-    ~0u,  // no _inlined_string_donated_
-    ~0u,  // no _split_
-    ~0u,  // no sizeof(Split)
-    PROTOBUF_FIELD_OFFSET(::longportapp::control::v1::ReconnectResponse, _impl_.session_id_),
-    PROTOBUF_FIELD_OFFSET(::longportapp::control::v1::ReconnectResponse, _impl_.expires_),
-    PROTOBUF_FIELD_OFFSET(::longportapp::control::v1::ReconnectResponse, _impl_.limit_),
-    PROTOBUF_FIELD_OFFSET(::longportapp::control::v1::ReconnectResponse, _impl_.online_),
-};
+static constexpr ::_pb::ServiceDescriptor const** file_level_service_descriptors_control_2fcontrol_2eproto = nullptr;
 
-static const ::_pbi::MigrationSchema
-    schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-        {0, -1, -1, sizeof(::longportapp::control::v1::Close)},
-        {10, 20, -1, sizeof(::longportapp::control::v1::Heartbeat)},
-        {22, 32, -1, sizeof(::longportapp::control::v1::AuthRequest_MetadataEntry_DoNotUse)},
-        {34, -1, -1, sizeof(::longportapp::control::v1::AuthRequest)},
-        {44, -1, -1, sizeof(::longportapp::control::v1::AuthResponse)},
-        {56, 66, -1, sizeof(::longportapp::control::v1::ReconnectRequest_MetadataEntry_DoNotUse)},
-        {68, -1, -1, sizeof(::longportapp::control::v1::ReconnectRequest)},
-        {78, -1, -1, sizeof(::longportapp::control::v1::ReconnectResponse)},
+const uint32_t TableStruct_control_2fcontrol_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::longbridge::control::v1::Close, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::longbridge::control::v1::Close, code_),
+  PROTOBUF_FIELD_OFFSET(::longbridge::control::v1::Close, reason_),
+  PROTOBUF_FIELD_OFFSET(::longbridge::control::v1::Heartbeat, _has_bits_),
+  PROTOBUF_FIELD_OFFSET(::longbridge::control::v1::Heartbeat, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::longbridge::control::v1::Heartbeat, timestamp_),
+  PROTOBUF_FIELD_OFFSET(::longbridge::control::v1::Heartbeat, heartbeat_id_),
+  ~0u,
+  0,
+  PROTOBUF_FIELD_OFFSET(::longbridge::control::v1::AuthRequest_MetadataEntry_DoNotUse, _has_bits_),
+  PROTOBUF_FIELD_OFFSET(::longbridge::control::v1::AuthRequest_MetadataEntry_DoNotUse, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::longbridge::control::v1::AuthRequest_MetadataEntry_DoNotUse, key_),
+  PROTOBUF_FIELD_OFFSET(::longbridge::control::v1::AuthRequest_MetadataEntry_DoNotUse, value_),
+  0,
+  1,
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::longbridge::control::v1::AuthRequest, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::longbridge::control::v1::AuthRequest, token_),
+  PROTOBUF_FIELD_OFFSET(::longbridge::control::v1::AuthRequest, metadata_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::longbridge::control::v1::AuthResponse, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::longbridge::control::v1::AuthResponse, session_id_),
+  PROTOBUF_FIELD_OFFSET(::longbridge::control::v1::AuthResponse, expires_),
+  PROTOBUF_FIELD_OFFSET(::longbridge::control::v1::AuthResponse, limit_),
+  PROTOBUF_FIELD_OFFSET(::longbridge::control::v1::AuthResponse, online_),
+  PROTOBUF_FIELD_OFFSET(::longbridge::control::v1::ReconnectRequest_MetadataEntry_DoNotUse, _has_bits_),
+  PROTOBUF_FIELD_OFFSET(::longbridge::control::v1::ReconnectRequest_MetadataEntry_DoNotUse, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::longbridge::control::v1::ReconnectRequest_MetadataEntry_DoNotUse, key_),
+  PROTOBUF_FIELD_OFFSET(::longbridge::control::v1::ReconnectRequest_MetadataEntry_DoNotUse, value_),
+  0,
+  1,
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::longbridge::control::v1::ReconnectRequest, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::longbridge::control::v1::ReconnectRequest, session_id_),
+  PROTOBUF_FIELD_OFFSET(::longbridge::control::v1::ReconnectRequest, metadata_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::longbridge::control::v1::ReconnectResponse, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::longbridge::control::v1::ReconnectResponse, session_id_),
+  PROTOBUF_FIELD_OFFSET(::longbridge::control::v1::ReconnectResponse, expires_),
+  PROTOBUF_FIELD_OFFSET(::longbridge::control::v1::ReconnectResponse, limit_),
+  PROTOBUF_FIELD_OFFSET(::longbridge::control::v1::ReconnectResponse, online_),
+};
+static const ::_pbi::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
+  { 0, -1, -1, sizeof(::longbridge::control::v1::Close)},
+  { 8, 16, -1, sizeof(::longbridge::control::v1::Heartbeat)},
+  { 18, 26, -1, sizeof(::longbridge::control::v1::AuthRequest_MetadataEntry_DoNotUse)},
+  { 28, -1, -1, sizeof(::longbridge::control::v1::AuthRequest)},
+  { 36, -1, -1, sizeof(::longbridge::control::v1::AuthResponse)},
+  { 46, 54, -1, sizeof(::longbridge::control::v1::ReconnectRequest_MetadataEntry_DoNotUse)},
+  { 56, -1, -1, sizeof(::longbridge::control::v1::ReconnectRequest)},
+  { 64, -1, -1, sizeof(::longbridge::control::v1::ReconnectResponse)},
 };
 
 static const ::_pb::Message* const file_default_instances[] = {
-    &::longportapp::control::v1::_Close_default_instance_._instance,
-    &::longportapp::control::v1::_Heartbeat_default_instance_._instance,
-    &::longportapp::control::v1::_AuthRequest_MetadataEntry_DoNotUse_default_instance_._instance,
-    &::longportapp::control::v1::_AuthRequest_default_instance_._instance,
-    &::longportapp::control::v1::_AuthResponse_default_instance_._instance,
-    &::longportapp::control::v1::_ReconnectRequest_MetadataEntry_DoNotUse_default_instance_._instance,
-    &::longportapp::control::v1::_ReconnectRequest_default_instance_._instance,
-    &::longportapp::control::v1::_ReconnectResponse_default_instance_._instance,
-};
-const char descriptor_table_protodef_control_2fcontrol_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-    "\n\025control/control.proto\022\026longportapp.con"
-    "trol.v1\"\342\001\n\005Close\0226\n\004code\030\001 \001(\0162\".longpo"
-    "rtapp.control.v1.Close.CodeR\004code\022\026\n\006rea"
-    "son\030\002 \001(\tR\006reason\"\210\001\n\004Code\022\024\n\020HeartbeatT"
-    "imeout\020\000\022\017\n\013ServerError\020\001\022\022\n\016ServerShutd"
-    "own\020\002\022\017\n\013UnpackError\020\003\022\r\n\tAuthError\020\004\022\017\n"
-    "\013SessExpired\020\005\022\024\n\020ConnectDuplicate\020\006\"b\n\t"
-    "Heartbeat\022\034\n\ttimestamp\030\001 \001(\003R\ttimestamp\022"
-    "&\n\014heartbeat_id\030\002 \001(\005H\000R\013heartbeatId\210\001\001B"
-    "\017\n\r_heartbeat_id\"\257\001\n\013AuthRequest\022\024\n\005toke"
-    "n\030\001 \001(\tR\005token\022M\n\010metadata\030\002 \003(\01321.longp"
-    "ortapp.control.v1.AuthRequest.MetadataEn"
-    "tryR\010metadata\032;\n\rMetadataEntry\022\020\n\003key\030\001 "
-    "\001(\tR\003key\022\024\n\005value\030\002 \001(\tR\005value:\0028\001\"u\n\014Au"
-    "thResponse\022\035\n\nsession_id\030\001 \001(\tR\tsessionI"
-    "d\022\030\n\007expires\030\002 \001(\003R\007expires\022\024\n\005limit\030\003 \001"
-    "(\rR\005limit\022\026\n\006online\030\004 \001(\rR\006online\"\302\001\n\020Re"
-    "connectRequest\022\035\n\nsession_id\030\001 \001(\tR\tsess"
-    "ionId\022R\n\010metadata\030\002 \003(\01326.longportapp.co"
-    "ntrol.v1.ReconnectRequest.MetadataEntryR"
-    "\010metadata\032;\n\rMetadataEntry\022\020\n\003key\030\001 \001(\tR"
-    "\003key\022\024\n\005value\030\002 \001(\tR\005value:\0028\001\"z\n\021Reconn"
-    "ectResponse\022\035\n\nsession_id\030\001 \001(\tR\tsession"
-    "Id\022\030\n\007expires\030\002 \001(\003R\007expires\022\024\n\005limit\030\003 "
-    "\001(\rR\005limit\022\026\n\006online\030\004 \001(\rR\006online*L\n\007Co"
-    "mmand\022\r\n\tCMD_CLOSE\020\000\022\021\n\rCMD_HEARTBEAT\020\001\022"
-    "\014\n\010CMD_AUTH\020\002\022\021\n\rCMD_RECONNECT\020\003B\347\001\n\032com"
-    ".longportapp.control.v1B\014ControlProtoP\001Z"
-    "Agithub.com/longportapp/openapi-protobuf"
-    "s/gen/go/control;controlv1\242\002\003LCX\252\002\026Longp"
-    "ortapp.Control.V1\312\002\026Longportapp\\Control\\"
-    "V1\342\002\"Longportapp\\Control\\V1\\GPBMetadata\352"
-    "\002\030Longportapp::Control::V1b\006proto3"
-};
-static ::absl::once_flag descriptor_table_control_2fcontrol_2eproto_once;
-const ::_pbi::DescriptorTable descriptor_table_control_2fcontrol_2eproto = {
-    false,
-    false,
-    1314,
-    descriptor_table_protodef_control_2fcontrol_2eproto,
-    "control/control.proto",
-    &descriptor_table_control_2fcontrol_2eproto_once,
-    nullptr,
-    0,
-    8,
-    schemas,
-    file_default_instances,
-    TableStruct_control_2fcontrol_2eproto::offsets,
-    file_level_metadata_control_2fcontrol_2eproto,
-    file_level_enum_descriptors_control_2fcontrol_2eproto,
-    file_level_service_descriptors_control_2fcontrol_2eproto,
+  &::longbridge::control::v1::_Close_default_instance_._instance,
+  &::longbridge::control::v1::_Heartbeat_default_instance_._instance,
+  &::longbridge::control::v1::_AuthRequest_MetadataEntry_DoNotUse_default_instance_._instance,
+  &::longbridge::control::v1::_AuthRequest_default_instance_._instance,
+  &::longbridge::control::v1::_AuthResponse_default_instance_._instance,
+  &::longbridge::control::v1::_ReconnectRequest_MetadataEntry_DoNotUse_default_instance_._instance,
+  &::longbridge::control::v1::_ReconnectRequest_default_instance_._instance,
+  &::longbridge::control::v1::_ReconnectResponse_default_instance_._instance,
 };
 
-// This function exists to be marked as weak.
-// It can significantly speed up compilation by breaking up LLVM's SCC
-// in the .pb.cc translation units. Large translation units see a
-// reduction of more than 35% of walltime for optimized builds. Without
-// the weak attribute all the messages in the file, including all the
-// vtables and everything they use become part of the same SCC through
-// a cycle like:
-// GetMetadata -> descriptor table -> default instances ->
-//   vtables -> GetMetadata
-// By adding a weak function here we break the connection from the
-// individual vtables back into the descriptor table.
+const char descriptor_table_protodef_control_2fcontrol_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
+  "\n\025control/control.proto\022\025longbridge.cont"
+  "rol.v1\"\341\001\n\005Close\0225\n\004code\030\001 \001(\0162!.longbri"
+  "dge.control.v1.Close.CodeR\004code\022\026\n\006reaso"
+  "n\030\002 \001(\tR\006reason\"\210\001\n\004Code\022\024\n\020HeartbeatTim"
+  "eout\020\000\022\017\n\013ServerError\020\001\022\022\n\016ServerShutdow"
+  "n\020\002\022\017\n\013UnpackError\020\003\022\r\n\tAuthError\020\004\022\017\n\013S"
+  "essExpired\020\005\022\024\n\020ConnectDuplicate\020\006\"b\n\tHe"
+  "artbeat\022\034\n\ttimestamp\030\001 \001(\003R\ttimestamp\022&\n"
+  "\014heartbeat_id\030\002 \001(\005H\000R\013heartbeatId\210\001\001B\017\n"
+  "\r_heartbeat_id\"\256\001\n\013AuthRequest\022\024\n\005token\030"
+  "\001 \001(\tR\005token\022L\n\010metadata\030\002 \003(\01320.longbri"
+  "dge.control.v1.AuthRequest.MetadataEntry"
+  "R\010metadata\032;\n\rMetadataEntry\022\020\n\003key\030\001 \001(\t"
+  "R\003key\022\024\n\005value\030\002 \001(\tR\005value:\0028\001\"u\n\014AuthR"
+  "esponse\022\035\n\nsession_id\030\001 \001(\tR\tsessionId\022\030"
+  "\n\007expires\030\002 \001(\003R\007expires\022\024\n\005limit\030\003 \001(\rR"
+  "\005limit\022\026\n\006online\030\004 \001(\rR\006online\"\301\001\n\020Recon"
+  "nectRequest\022\035\n\nsession_id\030\001 \001(\tR\tsession"
+  "Id\022Q\n\010metadata\030\002 \003(\01325.longbridge.contro"
+  "l.v1.ReconnectRequest.MetadataEntryR\010met"
+  "adata\032;\n\rMetadataEntry\022\020\n\003key\030\001 \001(\tR\003key"
+  "\022\024\n\005value\030\002 \001(\tR\005value:\0028\001\"z\n\021ReconnectR"
+  "esponse\022\035\n\nsession_id\030\001 \001(\tR\tsessionId\022\030"
+  "\n\007expires\030\002 \001(\003R\007expires\022\024\n\005limit\030\003 \001(\rR"
+  "\005limit\022\026\n\006online\030\004 \001(\rR\006online*L\n\007Comman"
+  "d\022\r\n\tCMD_CLOSE\020\000\022\021\n\rCMD_HEARTBEAT\020\001\022\014\n\010C"
+  "MD_AUTH\020\002\022\021\n\rCMD_RECONNECT\020\003B\341\001\n\031com.lon"
+  "gbridge.control.v1B\014ControlProtoP\001Z@gith"
+  "ub.com/longbridge/openapi-protobufs/gen/"
+  "go/control;controlv1\242\002\003LCX\252\002\025Longbridge."
+  "Control.V1\312\002\025Longbridge\\Control\\V1\342\002!Lon"
+  "gbridge\\Control\\V1\\GPBMetadata\352\002\027Longbri"
+  "dge::Control::V1b\006proto3"
+  ;
+static ::_pbi::once_flag descriptor_table_control_2fcontrol_2eproto_once;
+const ::_pbi::DescriptorTable descriptor_table_control_2fcontrol_2eproto = {
+    false, false, 1304, descriptor_table_protodef_control_2fcontrol_2eproto,
+    "control/control.proto",
+    &descriptor_table_control_2fcontrol_2eproto_once, nullptr, 0, 8,
+    schemas, file_default_instances, TableStruct_control_2fcontrol_2eproto::offsets,
+    file_level_metadata_control_2fcontrol_2eproto, file_level_enum_descriptors_control_2fcontrol_2eproto,
+    file_level_service_descriptors_control_2fcontrol_2eproto,
+};
 PROTOBUF_ATTRIBUTE_WEAK const ::_pbi::DescriptorTable* descriptor_table_control_2fcontrol_2eproto_getter() {
   return &descriptor_table_control_2fcontrol_2eproto;
 }
+
 // Force running AddDescriptors() at dynamic initialization time.
-PROTOBUF_ATTRIBUTE_INIT_PRIORITY2
-static ::_pbi::AddDescriptorsRunner dynamic_init_dummy_control_2fcontrol_2eproto(&descriptor_table_control_2fcontrol_2eproto);
-namespace longportapp {
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY2 static ::_pbi::AddDescriptorsRunner dynamic_init_dummy_control_2fcontrol_2eproto(&descriptor_table_control_2fcontrol_2eproto);
+namespace longbridge {
 namespace control {
 namespace v1 {
-const ::google::protobuf::EnumDescriptor* Close_Code_descriptor() {
-  ::google::protobuf::internal::AssignDescriptors(&descriptor_table_control_2fcontrol_2eproto);
+const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* Close_Code_descriptor() {
+  ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_control_2fcontrol_2eproto);
   return file_level_enum_descriptors_control_2fcontrol_2eproto[0];
 }
 bool Close_Code_IsValid(int value) {
@@ -384,9 +304,8 @@ bool Close_Code_IsValid(int value) {
       return false;
   }
 }
-#if (__cplusplus < 201703) && \
-  (!defined(_MSC_VER) || (_MSC_VER >= 1900 && _MSC_VER < 1912))
 
+#if (__cplusplus < 201703) && (!defined(_MSC_VER) || (_MSC_VER >= 1900 && _MSC_VER < 1912))
 constexpr Close_Code Close::HeartbeatTimeout;
 constexpr Close_Code Close::ServerError;
 constexpr Close_Code Close::ServerShutdown;
@@ -397,11 +316,9 @@ constexpr Close_Code Close::ConnectDuplicate;
 constexpr Close_Code Close::Code_MIN;
 constexpr Close_Code Close::Code_MAX;
 constexpr int Close::Code_ARRAYSIZE;
-
-#endif  // (__cplusplus < 201703) &&
-        // (!defined(_MSC_VER) || (_MSC_VER >= 1900 && _MSC_VER < 1912))
-const ::google::protobuf::EnumDescriptor* Command_descriptor() {
-  ::google::protobuf::internal::AssignDescriptors(&descriptor_table_control_2fcontrol_2eproto);
+#endif  // (__cplusplus < 201703) && (!defined(_MSC_VER) || (_MSC_VER >= 1900 && _MSC_VER < 1912))
+const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* Command_descriptor() {
+  ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_control_2fcontrol_2eproto);
   return file_level_enum_descriptors_control_2fcontrol_2eproto[1];
 }
 bool Command_IsValid(int value) {
@@ -415,206 +332,211 @@ bool Command_IsValid(int value) {
       return false;
   }
 }
+
+
 // ===================================================================
 
 class Close::_Internal {
  public:
 };
 
-Close::Close(::google::protobuf::Arena* arena)
-    : ::google::protobuf::Message(arena) {
-  SharedCtor(arena);
-  // @@protoc_insertion_point(arena_constructor:longportapp.control.v1.Close)
+Close::Close(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor();
+  // @@protoc_insertion_point(arena_constructor:longbridge.control.v1.Close)
 }
-Close::Close(const Close& from) : ::google::protobuf::Message() {
-  Close* const _this = this;
-  (void)_this;
-  new (&_impl_) Impl_{
-      decltype(_impl_.reason_){},
-      decltype(_impl_.code_){},
-      /*decltype(_impl_._cached_size_)*/ {},
-  };
-  _internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
-      from._internal_metadata_);
-  _impl_.reason_.InitDefault();
+Close::Close(const Close& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  reason_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-        _impl_.reason_.Set("", GetArenaForAllocation());
-  #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    reason_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (!from._internal_reason().empty()) {
-    _this->_impl_.reason_.Set(from._internal_reason(), _this->GetArenaForAllocation());
+    reason_.Set(from._internal_reason(), 
+      GetArenaForAllocation());
   }
-  _this->_impl_.code_ = from._impl_.code_;
+  code_ = from.code_;
+  // @@protoc_insertion_point(copy_constructor:longbridge.control.v1.Close)
+}
 
-  // @@protoc_insertion_point(copy_constructor:longportapp.control.v1.Close)
+inline void Close::SharedCtor() {
+reason_.InitDefault();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  reason_.Set("", GetArenaForAllocation());
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+code_ = 0;
 }
-inline void Close::SharedCtor(::_pb::Arena* arena) {
-  (void)arena;
-  new (&_impl_) Impl_{
-      decltype(_impl_.reason_){},
-      decltype(_impl_.code_){0},
-      /*decltype(_impl_._cached_size_)*/ {},
-  };
-  _impl_.reason_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-        _impl_.reason_.Set("", GetArenaForAllocation());
-  #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-}
+
 Close::~Close() {
-  // @@protoc_insertion_point(destructor:longportapp.control.v1.Close)
-  _internal_metadata_.Delete<::google::protobuf::UnknownFieldSet>();
+  // @@protoc_insertion_point(destructor:longbridge.control.v1.Close)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
 }
+
 inline void Close::SharedDtor() {
-  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.reason_.Destroy();
-}
-void Close::SetCachedSize(int size) const {
-  _impl_._cached_size_.Set(size);
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+  reason_.Destroy();
 }
 
-PROTOBUF_NOINLINE void Close::Clear() {
-// @@protoc_insertion_point(message_clear_start:longportapp.control.v1.Close)
-  ::uint32_t cached_has_bits = 0;
+void Close::SetCachedSize(int size) const {
+  _cached_size_.Set(size);
+}
+
+void Close::Clear() {
+// @@protoc_insertion_point(message_clear_start:longbridge.control.v1.Close)
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.reason_.ClearToEmpty();
-  _impl_.code_ = 0;
-  _internal_metadata_.Clear<::google::protobuf::UnknownFieldSet>();
+  reason_.ClearToEmpty();
+  code_ = 0;
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* Close::_InternalParse(
-    const char* ptr, ::_pbi::ParseContext* ctx) {
-  ptr = ::_pbi::TcParser::ParseLoop(this, ptr, ctx, &_table_.header);
+const char* Close::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // .longbridge.control.v1.Close.Code code = 1 [json_name = "code"];
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          uint64_t val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+          _internal_set_code(static_cast<::longbridge::control::v1::Close_Code>(val));
+        } else
+          goto handle_unusual;
+        continue;
+      // string reason = 2 [json_name = "reason"];
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
+          auto str = _internal_mutable_reason();
+          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(ptr);
+          CHK_(::_pbi::VerifyUTF8(str, "longbridge.control.v1.Close.reason"));
+        } else
+          goto handle_unusual;
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
   return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
 }
 
+uint8_t* Close::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:longbridge.control.v1.Close)
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
 
-PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
-const ::_pbi::TcParseTable<1, 2, 0, 43, 2> Close::_table_ = {
-  {
-    0,  // no _has_bits_
-    0, // no _extensions_
-    2, 8,  // max_field_number, fast_idx_mask
-    offsetof(decltype(_table_), field_lookup_table),
-    4294967292,  // skipmap
-    offsetof(decltype(_table_), field_entries),
-    2,  // num_field_entries
-    0,  // num_aux_entries
-    offsetof(decltype(_table_), field_names),  // no aux_entries
-    &_Close_default_instance_._instance,
-    ::_pbi::TcParser::GenericFallback,  // fallback
-  }, {{
-    // string reason = 2 [json_name = "reason"];
-    {::_pbi::TcParser::FastUS1,
-     {18, 63, 0, PROTOBUF_FIELD_OFFSET(Close, _impl_.reason_)}},
-    // .longportapp.control.v1.Close.Code code = 1 [json_name = "code"];
-    {::_pbi::TcParser::SingularVarintNoZag1<::uint32_t, offsetof(Close, _impl_.code_), 63>(),
-     {8, 63, 0, PROTOBUF_FIELD_OFFSET(Close, _impl_.code_)}},
-  }}, {{
-    65535, 65535
-  }}, {{
-    // .longportapp.control.v1.Close.Code code = 1 [json_name = "code"];
-    {PROTOBUF_FIELD_OFFSET(Close, _impl_.code_), 0, 0,
-    (0 | ::_fl::kFcSingular | ::_fl::kOpenEnum)},
-    // string reason = 2 [json_name = "reason"];
-    {PROTOBUF_FIELD_OFFSET(Close, _impl_.reason_), 0, 0,
-    (0 | ::_fl::kFcSingular | ::_fl::kUtf8String | ::_fl::kRepAString)},
-  }},
-  // no aux_entries
-  {{
-    "\34\0\6\0\0\0\0\0"
-    "longportapp.control.v1.Close"
-    "reason"
-  }},
-};
-
-::uint8_t* Close::_InternalSerialize(
-    ::uint8_t* target,
-    ::google::protobuf::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:longportapp.control.v1.Close)
-  ::uint32_t cached_has_bits = 0;
-  (void)cached_has_bits;
-
-  // .longportapp.control.v1.Close.Code code = 1 [json_name = "code"];
+  // .longbridge.control.v1.Close.Code code = 1 [json_name = "code"];
   if (this->_internal_code() != 0) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteEnumToArray(
-        1, this->_internal_code(), target);
+      1, this->_internal_code(), target);
   }
 
   // string reason = 2 [json_name = "reason"];
   if (!this->_internal_reason().empty()) {
-    const std::string& _s = this->_internal_reason();
-    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-        _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "longportapp.control.v1.Close.reason");
-    target = stream->WriteStringMaybeAliased(2, _s, target);
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_reason().data(), static_cast<int>(this->_internal_reason().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "longbridge.control.v1.Close.reason");
+    target = stream->WriteStringMaybeAliased(
+        2, this->_internal_reason(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target =
-        ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-            _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance), target, stream);
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:longportapp.control.v1.Close)
+  // @@protoc_insertion_point(serialize_to_array_end:longbridge.control.v1.Close)
   return target;
 }
 
-::size_t Close::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:longportapp.control.v1.Close)
-  ::size_t total_size = 0;
+size_t Close::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:longbridge.control.v1.Close)
+  size_t total_size = 0;
 
-  ::uint32_t cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // string reason = 2 [json_name = "reason"];
   if (!this->_internal_reason().empty()) {
-    total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
-                                    this->_internal_reason());
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_reason());
   }
 
-  // .longportapp.control.v1.Close.Code code = 1 [json_name = "code"];
+  // .longbridge.control.v1.Close.Code code = 1 [json_name = "code"];
   if (this->_internal_code() != 0) {
     total_size += 1 +
-                  ::_pbi::WireFormatLite::EnumSize(this->_internal_code());
+      ::_pbi::WireFormatLite::EnumSize(this->_internal_code());
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  return MaybeComputeUnknownFieldsSize(total_size, &_cached_size_);
 }
 
-const ::google::protobuf::Message::ClassData Close::_class_data_ = {
-    ::google::protobuf::Message::CopyWithSourceCheck,
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData Close::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSizeCheck,
     Close::MergeImpl
 };
-const ::google::protobuf::Message::ClassData*Close::GetClassData() const { return &_class_data_; }
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*Close::GetClassData() const { return &_class_data_; }
+
+void Close::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to,
+                      const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+  static_cast<Close *>(to)->MergeFrom(
+      static_cast<const Close &>(from));
+}
 
 
-void Close::MergeImpl(::google::protobuf::Message& to_msg, const ::google::protobuf::Message& from_msg) {
-  auto* const _this = static_cast<Close*>(&to_msg);
-  auto& from = static_cast<const Close&>(from_msg);
-  // @@protoc_insertion_point(class_specific_merge_from_start:longportapp.control.v1.Close)
-  ABSL_DCHECK_NE(&from, _this);
-  ::uint32_t cached_has_bits = 0;
+void Close::MergeFrom(const Close& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:longbridge.control.v1.Close)
+  GOOGLE_DCHECK_NE(&from, this);
+  uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   if (!from._internal_reason().empty()) {
-    _this->_internal_set_reason(from._internal_reason());
+    _internal_set_reason(from._internal_reason());
   }
   if (from._internal_code() != 0) {
-    _this->_internal_set_code(from._internal_code());
+    _internal_set_code(from._internal_code());
   }
-  _this->_internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void Close::CopyFrom(const Close& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:longportapp.control.v1.Close)
+// @@protoc_insertion_point(class_specific_copy_from_start:longbridge.control.v1.Close)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
-PROTOBUF_NOINLINE bool Close::IsInitialized() const {
+bool Close::IsInitialized() const {
   return true;
 }
 
@@ -623,455 +545,488 @@ void Close::InternalSwap(Close* other) {
   auto* lhs_arena = GetArenaForAllocation();
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.reason_, lhs_arena,
-                                       &other->_impl_.reason_, rhs_arena);
-  swap(_impl_.code_, other->_impl_.code_);
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &reason_, lhs_arena,
+      &other->reason_, rhs_arena
+  );
+  swap(code_, other->code_);
 }
 
-::google::protobuf::Metadata Close::GetMetadata() const {
+::PROTOBUF_NAMESPACE_ID::Metadata Close::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_control_2fcontrol_2eproto_getter, &descriptor_table_control_2fcontrol_2eproto_once,
       file_level_metadata_control_2fcontrol_2eproto[0]);
 }
+
 // ===================================================================
 
 class Heartbeat::_Internal {
  public:
-  using HasBits = decltype(std::declval<Heartbeat>()._impl_._has_bits_);
-  static constexpr ::int32_t kHasBitsOffset =
-    8 * PROTOBUF_FIELD_OFFSET(Heartbeat, _impl_._has_bits_);
+  using HasBits = decltype(std::declval<Heartbeat>()._has_bits_);
   static void set_has_heartbeat_id(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
 };
 
-Heartbeat::Heartbeat(::google::protobuf::Arena* arena)
-    : ::google::protobuf::Message(arena) {
-  SharedCtor(arena);
-  // @@protoc_insertion_point(arena_constructor:longportapp.control.v1.Heartbeat)
+Heartbeat::Heartbeat(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor();
+  // @@protoc_insertion_point(arena_constructor:longbridge.control.v1.Heartbeat)
 }
 Heartbeat::Heartbeat(const Heartbeat& from)
-    : ::google::protobuf::Message(), _impl_(from._impl_) {
-  _internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
-      from._internal_metadata_);
-  // @@protoc_insertion_point(copy_constructor:longportapp.control.v1.Heartbeat)
-}
-inline void Heartbeat::SharedCtor(::_pb::Arena* arena) {
-  (void)arena;
-  new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){},
-      /*decltype(_impl_._cached_size_)*/ {},
-      decltype(_impl_.timestamp_){::int64_t{0}},
-      decltype(_impl_.heartbeat_id_){0},
-  };
-}
-Heartbeat::~Heartbeat() {
-  // @@protoc_insertion_point(destructor:longportapp.control.v1.Heartbeat)
-  _internal_metadata_.Delete<::google::protobuf::UnknownFieldSet>();
-  SharedDtor();
-}
-inline void Heartbeat::SharedDtor() {
-  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
-}
-void Heartbeat::SetCachedSize(int size) const {
-  _impl_._cached_size_.Set(size);
+  : ::PROTOBUF_NAMESPACE_ID::Message(),
+      _has_bits_(from._has_bits_) {
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  ::memcpy(&timestamp_, &from.timestamp_,
+    static_cast<size_t>(reinterpret_cast<char*>(&heartbeat_id_) -
+    reinterpret_cast<char*>(&timestamp_)) + sizeof(heartbeat_id_));
+  // @@protoc_insertion_point(copy_constructor:longbridge.control.v1.Heartbeat)
 }
 
-PROTOBUF_NOINLINE void Heartbeat::Clear() {
-// @@protoc_insertion_point(message_clear_start:longportapp.control.v1.Heartbeat)
-  ::uint32_t cached_has_bits = 0;
+inline void Heartbeat::SharedCtor() {
+::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
+    reinterpret_cast<char*>(&timestamp_) - reinterpret_cast<char*>(this)),
+    0, static_cast<size_t>(reinterpret_cast<char*>(&heartbeat_id_) -
+    reinterpret_cast<char*>(&timestamp_)) + sizeof(heartbeat_id_));
+}
+
+Heartbeat::~Heartbeat() {
+  // @@protoc_insertion_point(destructor:longbridge.control.v1.Heartbeat)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void Heartbeat::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+}
+
+void Heartbeat::SetCachedSize(int size) const {
+  _cached_size_.Set(size);
+}
+
+void Heartbeat::Clear() {
+// @@protoc_insertion_point(message_clear_start:longbridge.control.v1.Heartbeat)
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.timestamp_ = ::int64_t{0};
-  _impl_.heartbeat_id_ = 0;
-  _impl_._has_bits_.Clear();
-  _internal_metadata_.Clear<::google::protobuf::UnknownFieldSet>();
+  timestamp_ = int64_t{0};
+  heartbeat_id_ = 0;
+  _has_bits_.Clear();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* Heartbeat::_InternalParse(
-    const char* ptr, ::_pbi::ParseContext* ctx) {
-  ptr = ::_pbi::TcParser::ParseLoop(this, ptr, ctx, &_table_.header);
+const char* Heartbeat::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // int64 timestamp = 1 [json_name = "timestamp"];
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          timestamp_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // optional int32 heartbeat_id = 2 [json_name = "heartbeatId"];
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
+          _Internal::set_has_heartbeat_id(&has_bits);
+          heartbeat_id_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  _has_bits_.Or(has_bits);
   return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
 }
 
-
-PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
-const ::_pbi::TcParseTable<1, 2, 0, 0, 2> Heartbeat::_table_ = {
-  {
-    PROTOBUF_FIELD_OFFSET(Heartbeat, _impl_._has_bits_),
-    0, // no _extensions_
-    2, 8,  // max_field_number, fast_idx_mask
-    offsetof(decltype(_table_), field_lookup_table),
-    4294967292,  // skipmap
-    offsetof(decltype(_table_), field_entries),
-    2,  // num_field_entries
-    0,  // num_aux_entries
-    offsetof(decltype(_table_), field_names),  // no aux_entries
-    &_Heartbeat_default_instance_._instance,
-    ::_pbi::TcParser::GenericFallback,  // fallback
-  }, {{
-    // optional int32 heartbeat_id = 2 [json_name = "heartbeatId"];
-    {::_pbi::TcParser::SingularVarintNoZag1<::uint32_t, offsetof(Heartbeat, _impl_.heartbeat_id_), 0>(),
-     {16, 0, 0, PROTOBUF_FIELD_OFFSET(Heartbeat, _impl_.heartbeat_id_)}},
-    // int64 timestamp = 1 [json_name = "timestamp"];
-    {::_pbi::TcParser::SingularVarintNoZag1<::uint64_t, offsetof(Heartbeat, _impl_.timestamp_), 63>(),
-     {8, 63, 0, PROTOBUF_FIELD_OFFSET(Heartbeat, _impl_.timestamp_)}},
-  }}, {{
-    65535, 65535
-  }}, {{
-    // int64 timestamp = 1 [json_name = "timestamp"];
-    {PROTOBUF_FIELD_OFFSET(Heartbeat, _impl_.timestamp_), -1, 0,
-    (0 | ::_fl::kFcSingular | ::_fl::kInt64)},
-    // optional int32 heartbeat_id = 2 [json_name = "heartbeatId"];
-    {PROTOBUF_FIELD_OFFSET(Heartbeat, _impl_.heartbeat_id_), _Internal::kHasBitsOffset + 0, 0,
-    (0 | ::_fl::kFcOptional | ::_fl::kInt32)},
-  }},
-  // no aux_entries
-  {{
-  }},
-};
-
-::uint8_t* Heartbeat::_InternalSerialize(
-    ::uint8_t* target,
-    ::google::protobuf::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:longportapp.control.v1.Heartbeat)
-  ::uint32_t cached_has_bits = 0;
-  (void)cached_has_bits;
+uint8_t* Heartbeat::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:longbridge.control.v1.Heartbeat)
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
 
   // int64 timestamp = 1 [json_name = "timestamp"];
   if (this->_internal_timestamp() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::
-        WriteInt64ToArrayWithField<1>(
-            stream, this->_internal_timestamp(), target);
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(1, this->_internal_timestamp(), target);
   }
 
-  cached_has_bits = _impl_._has_bits_[0];
   // optional int32 heartbeat_id = 2 [json_name = "heartbeatId"];
-  if (cached_has_bits & 0x00000001u) {
-    target = ::google::protobuf::internal::WireFormatLite::
-        WriteInt32ToArrayWithField<2>(
-            stream, this->_internal_heartbeat_id(), target);
+  if (_internal_has_heartbeat_id()) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt32ToArray(2, this->_internal_heartbeat_id(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target =
-        ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-            _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance), target, stream);
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:longportapp.control.v1.Heartbeat)
+  // @@protoc_insertion_point(serialize_to_array_end:longbridge.control.v1.Heartbeat)
   return target;
 }
 
-::size_t Heartbeat::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:longportapp.control.v1.Heartbeat)
-  ::size_t total_size = 0;
+size_t Heartbeat::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:longbridge.control.v1.Heartbeat)
+  size_t total_size = 0;
 
-  ::uint32_t cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // int64 timestamp = 1 [json_name = "timestamp"];
   if (this->_internal_timestamp() != 0) {
-    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(
-        this->_internal_timestamp());
+    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_timestamp());
   }
 
   // optional int32 heartbeat_id = 2 [json_name = "heartbeatId"];
-  cached_has_bits = _impl_._has_bits_[0];
+  cached_has_bits = _has_bits_[0];
   if (cached_has_bits & 0x00000001u) {
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(
-        this->_internal_heartbeat_id());
+    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_heartbeat_id());
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  return MaybeComputeUnknownFieldsSize(total_size, &_cached_size_);
 }
 
-const ::google::protobuf::Message::ClassData Heartbeat::_class_data_ = {
-    ::google::protobuf::Message::CopyWithSourceCheck,
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData Heartbeat::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSizeCheck,
     Heartbeat::MergeImpl
 };
-const ::google::protobuf::Message::ClassData*Heartbeat::GetClassData() const { return &_class_data_; }
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*Heartbeat::GetClassData() const { return &_class_data_; }
+
+void Heartbeat::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to,
+                      const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+  static_cast<Heartbeat *>(to)->MergeFrom(
+      static_cast<const Heartbeat &>(from));
+}
 
 
-void Heartbeat::MergeImpl(::google::protobuf::Message& to_msg, const ::google::protobuf::Message& from_msg) {
-  auto* const _this = static_cast<Heartbeat*>(&to_msg);
-  auto& from = static_cast<const Heartbeat&>(from_msg);
-  // @@protoc_insertion_point(class_specific_merge_from_start:longportapp.control.v1.Heartbeat)
-  ABSL_DCHECK_NE(&from, _this);
-  ::uint32_t cached_has_bits = 0;
+void Heartbeat::MergeFrom(const Heartbeat& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:longbridge.control.v1.Heartbeat)
+  GOOGLE_DCHECK_NE(&from, this);
+  uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   if (from._internal_timestamp() != 0) {
-    _this->_internal_set_timestamp(from._internal_timestamp());
+    _internal_set_timestamp(from._internal_timestamp());
   }
-  if ((from._impl_._has_bits_[0] & 0x00000001u) != 0) {
-    _this->_internal_set_heartbeat_id(from._internal_heartbeat_id());
+  if (from._internal_has_heartbeat_id()) {
+    _internal_set_heartbeat_id(from._internal_heartbeat_id());
   }
-  _this->_internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void Heartbeat::CopyFrom(const Heartbeat& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:longportapp.control.v1.Heartbeat)
+// @@protoc_insertion_point(class_specific_copy_from_start:longbridge.control.v1.Heartbeat)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
-PROTOBUF_NOINLINE bool Heartbeat::IsInitialized() const {
+bool Heartbeat::IsInitialized() const {
   return true;
 }
 
 void Heartbeat::InternalSwap(Heartbeat* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
-  ::google::protobuf::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(Heartbeat, _impl_.heartbeat_id_)
-      + sizeof(Heartbeat::_impl_.heartbeat_id_)
-      - PROTOBUF_FIELD_OFFSET(Heartbeat, _impl_.timestamp_)>(
-          reinterpret_cast<char*>(&_impl_.timestamp_),
-          reinterpret_cast<char*>(&other->_impl_.timestamp_));
+  swap(_has_bits_[0], other->_has_bits_[0]);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(Heartbeat, heartbeat_id_)
+      + sizeof(Heartbeat::heartbeat_id_)
+      - PROTOBUF_FIELD_OFFSET(Heartbeat, timestamp_)>(
+          reinterpret_cast<char*>(&timestamp_),
+          reinterpret_cast<char*>(&other->timestamp_));
 }
 
-::google::protobuf::Metadata Heartbeat::GetMetadata() const {
+::PROTOBUF_NAMESPACE_ID::Metadata Heartbeat::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_control_2fcontrol_2eproto_getter, &descriptor_table_control_2fcontrol_2eproto_once,
       file_level_metadata_control_2fcontrol_2eproto[1]);
 }
+
 // ===================================================================
 
 AuthRequest_MetadataEntry_DoNotUse::AuthRequest_MetadataEntry_DoNotUse() {}
-AuthRequest_MetadataEntry_DoNotUse::AuthRequest_MetadataEntry_DoNotUse(::google::protobuf::Arena* arena)
+AuthRequest_MetadataEntry_DoNotUse::AuthRequest_MetadataEntry_DoNotUse(::PROTOBUF_NAMESPACE_ID::Arena* arena)
     : SuperType(arena) {}
 void AuthRequest_MetadataEntry_DoNotUse::MergeFrom(const AuthRequest_MetadataEntry_DoNotUse& other) {
   MergeFromInternal(other);
 }
-::google::protobuf::Metadata AuthRequest_MetadataEntry_DoNotUse::GetMetadata() const {
+::PROTOBUF_NAMESPACE_ID::Metadata AuthRequest_MetadataEntry_DoNotUse::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_control_2fcontrol_2eproto_getter, &descriptor_table_control_2fcontrol_2eproto_once,
       file_level_metadata_control_2fcontrol_2eproto[2]);
 }
+
 // ===================================================================
 
 class AuthRequest::_Internal {
  public:
 };
 
-AuthRequest::AuthRequest(::google::protobuf::Arena* arena)
-    : ::google::protobuf::Message(arena) {
-  SharedCtor(arena);
-  // @@protoc_insertion_point(arena_constructor:longportapp.control.v1.AuthRequest)
-}
-AuthRequest::AuthRequest(const AuthRequest& from) : ::google::protobuf::Message() {
-  AuthRequest* const _this = this;
-  (void)_this;
-  new (&_impl_) Impl_{
-      /* decltype(_impl_.metadata_) */ {},
-      decltype(_impl_.token_){},
-      /*decltype(_impl_._cached_size_)*/ {},
-  };
-  _internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
-      from._internal_metadata_);
-  _this->_impl_.metadata_.MergeFrom(from._impl_.metadata_);
-  _impl_.token_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-        _impl_.token_.Set("", GetArenaForAllocation());
-  #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_token().empty()) {
-    _this->_impl_.token_.Set(from._internal_token(), _this->GetArenaForAllocation());
+AuthRequest::AuthRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned),
+  metadata_(arena) {
+  SharedCtor();
+  if (arena != nullptr && !is_message_owned) {
+    arena->OwnCustomDestructor(this, &AuthRequest::ArenaDtor);
   }
-
-  // @@protoc_insertion_point(copy_constructor:longportapp.control.v1.AuthRequest)
+  // @@protoc_insertion_point(arena_constructor:longbridge.control.v1.AuthRequest)
 }
-inline void AuthRequest::SharedCtor(::_pb::Arena* arena) {
-  (void)arena;
-  new (&_impl_) Impl_{
-      /* decltype(_impl_.metadata_) */ {::google::protobuf::internal::ArenaInitialized(), arena},
-      decltype(_impl_.token_){},
-      /*decltype(_impl_._cached_size_)*/ {},
-  };
-  _impl_.token_.InitDefault();
+AuthRequest::AuthRequest(const AuthRequest& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  metadata_.MergeFrom(from.metadata_);
+  token_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-        _impl_.token_.Set("", GetArenaForAllocation());
-  #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    token_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (!from._internal_token().empty()) {
+    token_.Set(from._internal_token(), 
+      GetArenaForAllocation());
+  }
+  // @@protoc_insertion_point(copy_constructor:longbridge.control.v1.AuthRequest)
 }
+
+inline void AuthRequest::SharedCtor() {
+token_.InitDefault();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  token_.Set("", GetArenaForAllocation());
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+}
+
 AuthRequest::~AuthRequest() {
-  // @@protoc_insertion_point(destructor:longportapp.control.v1.AuthRequest)
-  _internal_metadata_.Delete<::google::protobuf::UnknownFieldSet>();
+  // @@protoc_insertion_point(destructor:longbridge.control.v1.AuthRequest)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    ArenaDtor(this);
+    return;
+  }
   SharedDtor();
 }
+
 inline void AuthRequest::SharedDtor() {
-  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.metadata_.~MapField();
-  _impl_.token_.Destroy();
-}
-void AuthRequest::SetCachedSize(int size) const {
-  _impl_._cached_size_.Set(size);
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+  metadata_.Destruct();
+  token_.Destroy();
 }
 
-PROTOBUF_NOINLINE void AuthRequest::Clear() {
-// @@protoc_insertion_point(message_clear_start:longportapp.control.v1.AuthRequest)
-  ::uint32_t cached_has_bits = 0;
+void AuthRequest::ArenaDtor(void* object) {
+  AuthRequest* _this = reinterpret_cast< AuthRequest* >(object);
+  _this->metadata_.Destruct();
+}
+void AuthRequest::SetCachedSize(int size) const {
+  _cached_size_.Set(size);
+}
+
+void AuthRequest::Clear() {
+// @@protoc_insertion_point(message_clear_start:longbridge.control.v1.AuthRequest)
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.metadata_.Clear();
-  _impl_.token_.ClearToEmpty();
-  _internal_metadata_.Clear<::google::protobuf::UnknownFieldSet>();
+  metadata_.Clear();
+  token_.ClearToEmpty();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* AuthRequest::_InternalParse(
-    const char* ptr, ::_pbi::ParseContext* ctx) {
-  ptr = ::_pbi::TcParser::ParseLoop(this, ptr, ctx, &_table_.header);
+const char* AuthRequest::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // string token = 1 [json_name = "token"];
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
+          auto str = _internal_mutable_token();
+          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(ptr);
+          CHK_(::_pbi::VerifyUTF8(str, "longbridge.control.v1.AuthRequest.token"));
+        } else
+          goto handle_unusual;
+        continue;
+      // map<string, string> metadata = 2 [json_name = "metadata"];
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
+          ptr -= 1;
+          do {
+            ptr += 1;
+            ptr = ctx->ParseMessage(&metadata_, ptr);
+            CHK_(ptr);
+            if (!ctx->DataAvailable(ptr)) break;
+          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<18>(ptr));
+        } else
+          goto handle_unusual;
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
   return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
 }
 
-
-PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
-const ::_pbi::TcParseTable<0, 2, 1, 56, 2> AuthRequest::_table_ = {
-  {
-    0,  // no _has_bits_
-    0, // no _extensions_
-    2, 0,  // max_field_number, fast_idx_mask
-    offsetof(decltype(_table_), field_lookup_table),
-    4294967292,  // skipmap
-    offsetof(decltype(_table_), field_entries),
-    2,  // num_field_entries
-    1,  // num_aux_entries
-    offsetof(decltype(_table_), aux_entries),
-    &_AuthRequest_default_instance_._instance,
-    ::_pbi::TcParser::GenericFallback,  // fallback
-  }, {{
-    // string token = 1 [json_name = "token"];
-    {::_pbi::TcParser::FastUS1,
-     {10, 63, 0, PROTOBUF_FIELD_OFFSET(AuthRequest, _impl_.token_)}},
-  }}, {{
-    65535, 65535
-  }}, {{
-    // string token = 1 [json_name = "token"];
-    {PROTOBUF_FIELD_OFFSET(AuthRequest, _impl_.token_), 0, 0,
-    (0 | ::_fl::kFcSingular | ::_fl::kUtf8String | ::_fl::kRepAString)},
-    // map<string, string> metadata = 2 [json_name = "metadata"];
-    {PROTOBUF_FIELD_OFFSET(AuthRequest, _impl_.metadata_), 0, 0,
-    (0 | ::_fl::kFcRepeated | ::_fl::kMap)},
-  }}, {{
-    {::_pbi::TcParser::GetMapAuxInfo<decltype(AuthRequest()._impl_.metadata_)>(1, 0, 0)},
-  }}, {{
-    "\42\5\10\0\0\0\0\0"
-    "longportapp.control.v1.AuthRequest"
-    "token"
-    "metadata"
-  }},
-};
-
-::uint8_t* AuthRequest::_InternalSerialize(
-    ::uint8_t* target,
-    ::google::protobuf::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:longportapp.control.v1.AuthRequest)
-  ::uint32_t cached_has_bits = 0;
-  (void)cached_has_bits;
+uint8_t* AuthRequest::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:longbridge.control.v1.AuthRequest)
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
 
   // string token = 1 [json_name = "token"];
   if (!this->_internal_token().empty()) {
-    const std::string& _s = this->_internal_token();
-    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-        _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "longportapp.control.v1.AuthRequest.token");
-    target = stream->WriteStringMaybeAliased(1, _s, target);
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_token().data(), static_cast<int>(this->_internal_token().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "longbridge.control.v1.AuthRequest.token");
+    target = stream->WriteStringMaybeAliased(
+        1, this->_internal_token(), target);
   }
 
   // map<string, string> metadata = 2 [json_name = "metadata"];
-  if (!_internal_metadata().empty()) {
-    using MapType = ::google::protobuf::Map<std::string, std::string>;
+  if (!this->_internal_metadata().empty()) {
+    using MapType = ::_pb::Map<std::string, std::string>;
     using WireHelper = AuthRequest_MetadataEntry_DoNotUse::Funcs;
-    const auto& field = _internal_metadata();
+    const auto& map_field = this->_internal_metadata();
+    auto check_utf8 = [](const MapType::value_type& entry) {
+      (void)entry;
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+        entry.first.data(), static_cast<int>(entry.first.length()),
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+        "longbridge.control.v1.AuthRequest.MetadataEntry.key");
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+        entry.second.data(), static_cast<int>(entry.second.length()),
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+        "longbridge.control.v1.AuthRequest.MetadataEntry.value");
+    };
 
-    if (stream->IsSerializationDeterministic() && field.size() > 1) {
-      for (const auto& entry : ::google::protobuf::internal::MapSorterPtr<MapType>(field)) {
-        target = WireHelper::InternalSerialize(
-            2, entry.first, entry.second, target, stream);
-        ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-            entry.first.data(), static_cast<int>(entry.first.length()),
- ::google::protobuf::internal::WireFormatLite::SERIALIZE, "longportapp.control.v1.AuthRequest.metadata");
-        ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-            entry.second.data(), static_cast<int>(entry.second.length()),
- ::google::protobuf::internal::WireFormatLite::SERIALIZE, "longportapp.control.v1.AuthRequest.metadata");
+    if (stream->IsSerializationDeterministic() && map_field.size() > 1) {
+      for (const auto& entry : ::_pbi::MapSorterPtr<MapType>(map_field)) {
+        target = WireHelper::InternalSerialize(2, entry.first, entry.second, target, stream);
+        check_utf8(entry);
       }
     } else {
-      for (const auto& entry : field) {
-        target = WireHelper::InternalSerialize(
-            2, entry.first, entry.second, target, stream);
-        ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-            entry.first.data(), static_cast<int>(entry.first.length()),
- ::google::protobuf::internal::WireFormatLite::SERIALIZE, "longportapp.control.v1.AuthRequest.metadata");
-        ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-            entry.second.data(), static_cast<int>(entry.second.length()),
- ::google::protobuf::internal::WireFormatLite::SERIALIZE, "longportapp.control.v1.AuthRequest.metadata");
+      for (const auto& entry : map_field) {
+        target = WireHelper::InternalSerialize(2, entry.first, entry.second, target, stream);
+        check_utf8(entry);
       }
     }
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target =
-        ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-            _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance), target, stream);
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:longportapp.control.v1.AuthRequest)
+  // @@protoc_insertion_point(serialize_to_array_end:longbridge.control.v1.AuthRequest)
   return target;
 }
 
-::size_t AuthRequest::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:longportapp.control.v1.AuthRequest)
-  ::size_t total_size = 0;
+size_t AuthRequest::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:longbridge.control.v1.AuthRequest)
+  size_t total_size = 0;
 
-  ::uint32_t cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // map<string, string> metadata = 2 [json_name = "metadata"];
-  total_size += 1 * ::google::protobuf::internal::FromIntSize(_internal_metadata_size());
-  for (const auto& entry : _internal_metadata()) {
-    total_size += AuthRequest_MetadataEntry_DoNotUse::Funcs::ByteSizeLong(entry.first, entry.second);
+  total_size += 1 *
+      ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(this->_internal_metadata_size());
+  for (::PROTOBUF_NAMESPACE_ID::Map< std::string, std::string >::const_iterator
+      it = this->_internal_metadata().begin();
+      it != this->_internal_metadata().end(); ++it) {
+    total_size += AuthRequest_MetadataEntry_DoNotUse::Funcs::ByteSizeLong(it->first, it->second);
   }
+
   // string token = 1 [json_name = "token"];
   if (!this->_internal_token().empty()) {
-    total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
-                                    this->_internal_token());
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_token());
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  return MaybeComputeUnknownFieldsSize(total_size, &_cached_size_);
 }
 
-const ::google::protobuf::Message::ClassData AuthRequest::_class_data_ = {
-    ::google::protobuf::Message::CopyWithSourceCheck,
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData AuthRequest::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSizeCheck,
     AuthRequest::MergeImpl
 };
-const ::google::protobuf::Message::ClassData*AuthRequest::GetClassData() const { return &_class_data_; }
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*AuthRequest::GetClassData() const { return &_class_data_; }
+
+void AuthRequest::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to,
+                      const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+  static_cast<AuthRequest *>(to)->MergeFrom(
+      static_cast<const AuthRequest &>(from));
+}
 
 
-void AuthRequest::MergeImpl(::google::protobuf::Message& to_msg, const ::google::protobuf::Message& from_msg) {
-  auto* const _this = static_cast<AuthRequest*>(&to_msg);
-  auto& from = static_cast<const AuthRequest&>(from_msg);
-  // @@protoc_insertion_point(class_specific_merge_from_start:longportapp.control.v1.AuthRequest)
-  ABSL_DCHECK_NE(&from, _this);
-  ::uint32_t cached_has_bits = 0;
+void AuthRequest::MergeFrom(const AuthRequest& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:longbridge.control.v1.AuthRequest)
+  GOOGLE_DCHECK_NE(&from, this);
+  uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  _this->_impl_.metadata_.MergeFrom(from._impl_.metadata_);
+  metadata_.MergeFrom(from.metadata_);
   if (!from._internal_token().empty()) {
-    _this->_internal_set_token(from._internal_token());
+    _internal_set_token(from._internal_token());
   }
-  _this->_internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void AuthRequest::CopyFrom(const AuthRequest& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:longportapp.control.v1.AuthRequest)
+// @@protoc_insertion_point(class_specific_copy_from_start:longbridge.control.v1.AuthRequest)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
-PROTOBUF_NOINLINE bool AuthRequest::IsInitialized() const {
+bool AuthRequest::IsInitialized() const {
   return true;
 }
 
@@ -1080,268 +1035,270 @@ void AuthRequest::InternalSwap(AuthRequest* other) {
   auto* lhs_arena = GetArenaForAllocation();
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  _impl_.metadata_.InternalSwap(&other->_impl_.metadata_);
-  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.token_, lhs_arena,
-                                       &other->_impl_.token_, rhs_arena);
+  metadata_.InternalSwap(&other->metadata_);
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &token_, lhs_arena,
+      &other->token_, rhs_arena
+  );
 }
 
-::google::protobuf::Metadata AuthRequest::GetMetadata() const {
+::PROTOBUF_NAMESPACE_ID::Metadata AuthRequest::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_control_2fcontrol_2eproto_getter, &descriptor_table_control_2fcontrol_2eproto_once,
       file_level_metadata_control_2fcontrol_2eproto[3]);
 }
+
 // ===================================================================
 
 class AuthResponse::_Internal {
  public:
 };
 
-AuthResponse::AuthResponse(::google::protobuf::Arena* arena)
-    : ::google::protobuf::Message(arena) {
-  SharedCtor(arena);
-  // @@protoc_insertion_point(arena_constructor:longportapp.control.v1.AuthResponse)
+AuthResponse::AuthResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor();
+  // @@protoc_insertion_point(arena_constructor:longbridge.control.v1.AuthResponse)
 }
-AuthResponse::AuthResponse(const AuthResponse& from) : ::google::protobuf::Message() {
-  AuthResponse* const _this = this;
-  (void)_this;
-  new (&_impl_) Impl_{
-      decltype(_impl_.session_id_){},
-      decltype(_impl_.expires_){},
-      decltype(_impl_.limit_){},
-      decltype(_impl_.online_){},
-      /*decltype(_impl_._cached_size_)*/ {},
-  };
-  _internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
-      from._internal_metadata_);
-  _impl_.session_id_.InitDefault();
+AuthResponse::AuthResponse(const AuthResponse& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  session_id_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-        _impl_.session_id_.Set("", GetArenaForAllocation());
-  #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    session_id_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (!from._internal_session_id().empty()) {
-    _this->_impl_.session_id_.Set(from._internal_session_id(), _this->GetArenaForAllocation());
+    session_id_.Set(from._internal_session_id(), 
+      GetArenaForAllocation());
   }
-  ::memcpy(&_impl_.expires_, &from._impl_.expires_,
-    static_cast<::size_t>(reinterpret_cast<char*>(&_impl_.online_) -
-    reinterpret_cast<char*>(&_impl_.expires_)) + sizeof(_impl_.online_));
+  ::memcpy(&expires_, &from.expires_,
+    static_cast<size_t>(reinterpret_cast<char*>(&online_) -
+    reinterpret_cast<char*>(&expires_)) + sizeof(online_));
+  // @@protoc_insertion_point(copy_constructor:longbridge.control.v1.AuthResponse)
+}
 
-  // @@protoc_insertion_point(copy_constructor:longportapp.control.v1.AuthResponse)
+inline void AuthResponse::SharedCtor() {
+session_id_.InitDefault();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  session_id_.Set("", GetArenaForAllocation());
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
+    reinterpret_cast<char*>(&expires_) - reinterpret_cast<char*>(this)),
+    0, static_cast<size_t>(reinterpret_cast<char*>(&online_) -
+    reinterpret_cast<char*>(&expires_)) + sizeof(online_));
 }
-inline void AuthResponse::SharedCtor(::_pb::Arena* arena) {
-  (void)arena;
-  new (&_impl_) Impl_{
-      decltype(_impl_.session_id_){},
-      decltype(_impl_.expires_){::int64_t{0}},
-      decltype(_impl_.limit_){0u},
-      decltype(_impl_.online_){0u},
-      /*decltype(_impl_._cached_size_)*/ {},
-  };
-  _impl_.session_id_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-        _impl_.session_id_.Set("", GetArenaForAllocation());
-  #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-}
+
 AuthResponse::~AuthResponse() {
-  // @@protoc_insertion_point(destructor:longportapp.control.v1.AuthResponse)
-  _internal_metadata_.Delete<::google::protobuf::UnknownFieldSet>();
+  // @@protoc_insertion_point(destructor:longbridge.control.v1.AuthResponse)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
 }
+
 inline void AuthResponse::SharedDtor() {
-  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.session_id_.Destroy();
-}
-void AuthResponse::SetCachedSize(int size) const {
-  _impl_._cached_size_.Set(size);
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+  session_id_.Destroy();
 }
 
-PROTOBUF_NOINLINE void AuthResponse::Clear() {
-// @@protoc_insertion_point(message_clear_start:longportapp.control.v1.AuthResponse)
-  ::uint32_t cached_has_bits = 0;
+void AuthResponse::SetCachedSize(int size) const {
+  _cached_size_.Set(size);
+}
+
+void AuthResponse::Clear() {
+// @@protoc_insertion_point(message_clear_start:longbridge.control.v1.AuthResponse)
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.session_id_.ClearToEmpty();
-  ::memset(&_impl_.expires_, 0, static_cast<::size_t>(
-      reinterpret_cast<char*>(&_impl_.online_) -
-      reinterpret_cast<char*>(&_impl_.expires_)) + sizeof(_impl_.online_));
-  _internal_metadata_.Clear<::google::protobuf::UnknownFieldSet>();
+  session_id_.ClearToEmpty();
+  ::memset(&expires_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&online_) -
+      reinterpret_cast<char*>(&expires_)) + sizeof(online_));
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* AuthResponse::_InternalParse(
-    const char* ptr, ::_pbi::ParseContext* ctx) {
-  ptr = ::_pbi::TcParser::ParseLoop(this, ptr, ctx, &_table_.header);
+const char* AuthResponse::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // string session_id = 1 [json_name = "sessionId"];
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
+          auto str = _internal_mutable_session_id();
+          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(ptr);
+          CHK_(::_pbi::VerifyUTF8(str, "longbridge.control.v1.AuthResponse.session_id"));
+        } else
+          goto handle_unusual;
+        continue;
+      // int64 expires = 2 [json_name = "expires"];
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
+          expires_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // uint32 limit = 3 [json_name = "limit"];
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
+          limit_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // uint32 online = 4 [json_name = "online"];
+      case 4:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 32)) {
+          online_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
   return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
 }
 
-
-PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
-const ::_pbi::TcParseTable<2, 4, 0, 54, 2> AuthResponse::_table_ = {
-  {
-    0,  // no _has_bits_
-    0, // no _extensions_
-    4, 24,  // max_field_number, fast_idx_mask
-    offsetof(decltype(_table_), field_lookup_table),
-    4294967280,  // skipmap
-    offsetof(decltype(_table_), field_entries),
-    4,  // num_field_entries
-    0,  // num_aux_entries
-    offsetof(decltype(_table_), field_names),  // no aux_entries
-    &_AuthResponse_default_instance_._instance,
-    ::_pbi::TcParser::GenericFallback,  // fallback
-  }, {{
-    // uint32 online = 4 [json_name = "online"];
-    {::_pbi::TcParser::SingularVarintNoZag1<::uint32_t, offsetof(AuthResponse, _impl_.online_), 63>(),
-     {32, 63, 0, PROTOBUF_FIELD_OFFSET(AuthResponse, _impl_.online_)}},
-    // string session_id = 1 [json_name = "sessionId"];
-    {::_pbi::TcParser::FastUS1,
-     {10, 63, 0, PROTOBUF_FIELD_OFFSET(AuthResponse, _impl_.session_id_)}},
-    // int64 expires = 2 [json_name = "expires"];
-    {::_pbi::TcParser::SingularVarintNoZag1<::uint64_t, offsetof(AuthResponse, _impl_.expires_), 63>(),
-     {16, 63, 0, PROTOBUF_FIELD_OFFSET(AuthResponse, _impl_.expires_)}},
-    // uint32 limit = 3 [json_name = "limit"];
-    {::_pbi::TcParser::SingularVarintNoZag1<::uint32_t, offsetof(AuthResponse, _impl_.limit_), 63>(),
-     {24, 63, 0, PROTOBUF_FIELD_OFFSET(AuthResponse, _impl_.limit_)}},
-  }}, {{
-    65535, 65535
-  }}, {{
-    // string session_id = 1 [json_name = "sessionId"];
-    {PROTOBUF_FIELD_OFFSET(AuthResponse, _impl_.session_id_), 0, 0,
-    (0 | ::_fl::kFcSingular | ::_fl::kUtf8String | ::_fl::kRepAString)},
-    // int64 expires = 2 [json_name = "expires"];
-    {PROTOBUF_FIELD_OFFSET(AuthResponse, _impl_.expires_), 0, 0,
-    (0 | ::_fl::kFcSingular | ::_fl::kInt64)},
-    // uint32 limit = 3 [json_name = "limit"];
-    {PROTOBUF_FIELD_OFFSET(AuthResponse, _impl_.limit_), 0, 0,
-    (0 | ::_fl::kFcSingular | ::_fl::kUInt32)},
-    // uint32 online = 4 [json_name = "online"];
-    {PROTOBUF_FIELD_OFFSET(AuthResponse, _impl_.online_), 0, 0,
-    (0 | ::_fl::kFcSingular | ::_fl::kUInt32)},
-  }},
-  // no aux_entries
-  {{
-    "\43\12\0\0\0\0\0\0"
-    "longportapp.control.v1.AuthResponse"
-    "session_id"
-  }},
-};
-
-::uint8_t* AuthResponse::_InternalSerialize(
-    ::uint8_t* target,
-    ::google::protobuf::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:longportapp.control.v1.AuthResponse)
-  ::uint32_t cached_has_bits = 0;
-  (void)cached_has_bits;
+uint8_t* AuthResponse::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:longbridge.control.v1.AuthResponse)
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
 
   // string session_id = 1 [json_name = "sessionId"];
   if (!this->_internal_session_id().empty()) {
-    const std::string& _s = this->_internal_session_id();
-    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-        _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "longportapp.control.v1.AuthResponse.session_id");
-    target = stream->WriteStringMaybeAliased(1, _s, target);
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_session_id().data(), static_cast<int>(this->_internal_session_id().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "longbridge.control.v1.AuthResponse.session_id");
+    target = stream->WriteStringMaybeAliased(
+        1, this->_internal_session_id(), target);
   }
 
   // int64 expires = 2 [json_name = "expires"];
   if (this->_internal_expires() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::
-        WriteInt64ToArrayWithField<2>(
-            stream, this->_internal_expires(), target);
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(2, this->_internal_expires(), target);
   }
 
   // uint32 limit = 3 [json_name = "limit"];
   if (this->_internal_limit() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(
-        3, this->_internal_limit(), target);
+    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(3, this->_internal_limit(), target);
   }
 
   // uint32 online = 4 [json_name = "online"];
   if (this->_internal_online() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(
-        4, this->_internal_online(), target);
+    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(4, this->_internal_online(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target =
-        ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-            _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance), target, stream);
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:longportapp.control.v1.AuthResponse)
+  // @@protoc_insertion_point(serialize_to_array_end:longbridge.control.v1.AuthResponse)
   return target;
 }
 
-::size_t AuthResponse::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:longportapp.control.v1.AuthResponse)
-  ::size_t total_size = 0;
+size_t AuthResponse::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:longbridge.control.v1.AuthResponse)
+  size_t total_size = 0;
 
-  ::uint32_t cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // string session_id = 1 [json_name = "sessionId"];
   if (!this->_internal_session_id().empty()) {
-    total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
-                                    this->_internal_session_id());
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_session_id());
   }
 
   // int64 expires = 2 [json_name = "expires"];
   if (this->_internal_expires() != 0) {
-    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(
-        this->_internal_expires());
+    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_expires());
   }
 
   // uint32 limit = 3 [json_name = "limit"];
   if (this->_internal_limit() != 0) {
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(
-        this->_internal_limit());
+    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_limit());
   }
 
   // uint32 online = 4 [json_name = "online"];
   if (this->_internal_online() != 0) {
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(
-        this->_internal_online());
+    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_online());
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  return MaybeComputeUnknownFieldsSize(total_size, &_cached_size_);
 }
 
-const ::google::protobuf::Message::ClassData AuthResponse::_class_data_ = {
-    ::google::protobuf::Message::CopyWithSourceCheck,
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData AuthResponse::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSizeCheck,
     AuthResponse::MergeImpl
 };
-const ::google::protobuf::Message::ClassData*AuthResponse::GetClassData() const { return &_class_data_; }
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*AuthResponse::GetClassData() const { return &_class_data_; }
+
+void AuthResponse::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to,
+                      const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+  static_cast<AuthResponse *>(to)->MergeFrom(
+      static_cast<const AuthResponse &>(from));
+}
 
 
-void AuthResponse::MergeImpl(::google::protobuf::Message& to_msg, const ::google::protobuf::Message& from_msg) {
-  auto* const _this = static_cast<AuthResponse*>(&to_msg);
-  auto& from = static_cast<const AuthResponse&>(from_msg);
-  // @@protoc_insertion_point(class_specific_merge_from_start:longportapp.control.v1.AuthResponse)
-  ABSL_DCHECK_NE(&from, _this);
-  ::uint32_t cached_has_bits = 0;
+void AuthResponse::MergeFrom(const AuthResponse& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:longbridge.control.v1.AuthResponse)
+  GOOGLE_DCHECK_NE(&from, this);
+  uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   if (!from._internal_session_id().empty()) {
-    _this->_internal_set_session_id(from._internal_session_id());
+    _internal_set_session_id(from._internal_session_id());
   }
   if (from._internal_expires() != 0) {
-    _this->_internal_set_expires(from._internal_expires());
+    _internal_set_expires(from._internal_expires());
   }
   if (from._internal_limit() != 0) {
-    _this->_internal_set_limit(from._internal_limit());
+    _internal_set_limit(from._internal_limit());
   }
   if (from._internal_online() != 0) {
-    _this->_internal_set_online(from._internal_online());
+    _internal_set_online(from._internal_online());
   }
-  _this->_internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void AuthResponse::CopyFrom(const AuthResponse& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:longportapp.control.v1.AuthResponse)
+// @@protoc_insertion_point(class_specific_copy_from_start:longbridge.control.v1.AuthResponse)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
-PROTOBUF_NOINLINE bool AuthResponse::IsInitialized() const {
+bool AuthResponse::IsInitialized() const {
   return true;
 }
 
@@ -1350,254 +1307,278 @@ void AuthResponse::InternalSwap(AuthResponse* other) {
   auto* lhs_arena = GetArenaForAllocation();
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.session_id_, lhs_arena,
-                                       &other->_impl_.session_id_, rhs_arena);
-  ::google::protobuf::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(AuthResponse, _impl_.online_)
-      + sizeof(AuthResponse::_impl_.online_)
-      - PROTOBUF_FIELD_OFFSET(AuthResponse, _impl_.expires_)>(
-          reinterpret_cast<char*>(&_impl_.expires_),
-          reinterpret_cast<char*>(&other->_impl_.expires_));
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &session_id_, lhs_arena,
+      &other->session_id_, rhs_arena
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(AuthResponse, online_)
+      + sizeof(AuthResponse::online_)
+      - PROTOBUF_FIELD_OFFSET(AuthResponse, expires_)>(
+          reinterpret_cast<char*>(&expires_),
+          reinterpret_cast<char*>(&other->expires_));
 }
 
-::google::protobuf::Metadata AuthResponse::GetMetadata() const {
+::PROTOBUF_NAMESPACE_ID::Metadata AuthResponse::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_control_2fcontrol_2eproto_getter, &descriptor_table_control_2fcontrol_2eproto_once,
       file_level_metadata_control_2fcontrol_2eproto[4]);
 }
+
 // ===================================================================
 
 ReconnectRequest_MetadataEntry_DoNotUse::ReconnectRequest_MetadataEntry_DoNotUse() {}
-ReconnectRequest_MetadataEntry_DoNotUse::ReconnectRequest_MetadataEntry_DoNotUse(::google::protobuf::Arena* arena)
+ReconnectRequest_MetadataEntry_DoNotUse::ReconnectRequest_MetadataEntry_DoNotUse(::PROTOBUF_NAMESPACE_ID::Arena* arena)
     : SuperType(arena) {}
 void ReconnectRequest_MetadataEntry_DoNotUse::MergeFrom(const ReconnectRequest_MetadataEntry_DoNotUse& other) {
   MergeFromInternal(other);
 }
-::google::protobuf::Metadata ReconnectRequest_MetadataEntry_DoNotUse::GetMetadata() const {
+::PROTOBUF_NAMESPACE_ID::Metadata ReconnectRequest_MetadataEntry_DoNotUse::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_control_2fcontrol_2eproto_getter, &descriptor_table_control_2fcontrol_2eproto_once,
       file_level_metadata_control_2fcontrol_2eproto[5]);
 }
+
 // ===================================================================
 
 class ReconnectRequest::_Internal {
  public:
 };
 
-ReconnectRequest::ReconnectRequest(::google::protobuf::Arena* arena)
-    : ::google::protobuf::Message(arena) {
-  SharedCtor(arena);
-  // @@protoc_insertion_point(arena_constructor:longportapp.control.v1.ReconnectRequest)
-}
-ReconnectRequest::ReconnectRequest(const ReconnectRequest& from) : ::google::protobuf::Message() {
-  ReconnectRequest* const _this = this;
-  (void)_this;
-  new (&_impl_) Impl_{
-      /* decltype(_impl_.metadata_) */ {},
-      decltype(_impl_.session_id_){},
-      /*decltype(_impl_._cached_size_)*/ {},
-  };
-  _internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
-      from._internal_metadata_);
-  _this->_impl_.metadata_.MergeFrom(from._impl_.metadata_);
-  _impl_.session_id_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-        _impl_.session_id_.Set("", GetArenaForAllocation());
-  #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_session_id().empty()) {
-    _this->_impl_.session_id_.Set(from._internal_session_id(), _this->GetArenaForAllocation());
+ReconnectRequest::ReconnectRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned),
+  metadata_(arena) {
+  SharedCtor();
+  if (arena != nullptr && !is_message_owned) {
+    arena->OwnCustomDestructor(this, &ReconnectRequest::ArenaDtor);
   }
-
-  // @@protoc_insertion_point(copy_constructor:longportapp.control.v1.ReconnectRequest)
+  // @@protoc_insertion_point(arena_constructor:longbridge.control.v1.ReconnectRequest)
 }
-inline void ReconnectRequest::SharedCtor(::_pb::Arena* arena) {
-  (void)arena;
-  new (&_impl_) Impl_{
-      /* decltype(_impl_.metadata_) */ {::google::protobuf::internal::ArenaInitialized(), arena},
-      decltype(_impl_.session_id_){},
-      /*decltype(_impl_._cached_size_)*/ {},
-  };
-  _impl_.session_id_.InitDefault();
+ReconnectRequest::ReconnectRequest(const ReconnectRequest& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  metadata_.MergeFrom(from.metadata_);
+  session_id_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-        _impl_.session_id_.Set("", GetArenaForAllocation());
-  #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    session_id_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (!from._internal_session_id().empty()) {
+    session_id_.Set(from._internal_session_id(), 
+      GetArenaForAllocation());
+  }
+  // @@protoc_insertion_point(copy_constructor:longbridge.control.v1.ReconnectRequest)
 }
+
+inline void ReconnectRequest::SharedCtor() {
+session_id_.InitDefault();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  session_id_.Set("", GetArenaForAllocation());
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+}
+
 ReconnectRequest::~ReconnectRequest() {
-  // @@protoc_insertion_point(destructor:longportapp.control.v1.ReconnectRequest)
-  _internal_metadata_.Delete<::google::protobuf::UnknownFieldSet>();
+  // @@protoc_insertion_point(destructor:longbridge.control.v1.ReconnectRequest)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    ArenaDtor(this);
+    return;
+  }
   SharedDtor();
 }
+
 inline void ReconnectRequest::SharedDtor() {
-  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.metadata_.~MapField();
-  _impl_.session_id_.Destroy();
-}
-void ReconnectRequest::SetCachedSize(int size) const {
-  _impl_._cached_size_.Set(size);
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+  metadata_.Destruct();
+  session_id_.Destroy();
 }
 
-PROTOBUF_NOINLINE void ReconnectRequest::Clear() {
-// @@protoc_insertion_point(message_clear_start:longportapp.control.v1.ReconnectRequest)
-  ::uint32_t cached_has_bits = 0;
+void ReconnectRequest::ArenaDtor(void* object) {
+  ReconnectRequest* _this = reinterpret_cast< ReconnectRequest* >(object);
+  _this->metadata_.Destruct();
+}
+void ReconnectRequest::SetCachedSize(int size) const {
+  _cached_size_.Set(size);
+}
+
+void ReconnectRequest::Clear() {
+// @@protoc_insertion_point(message_clear_start:longbridge.control.v1.ReconnectRequest)
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.metadata_.Clear();
-  _impl_.session_id_.ClearToEmpty();
-  _internal_metadata_.Clear<::google::protobuf::UnknownFieldSet>();
+  metadata_.Clear();
+  session_id_.ClearToEmpty();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* ReconnectRequest::_InternalParse(
-    const char* ptr, ::_pbi::ParseContext* ctx) {
-  ptr = ::_pbi::TcParser::ParseLoop(this, ptr, ctx, &_table_.header);
+const char* ReconnectRequest::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // string session_id = 1 [json_name = "sessionId"];
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
+          auto str = _internal_mutable_session_id();
+          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(ptr);
+          CHK_(::_pbi::VerifyUTF8(str, "longbridge.control.v1.ReconnectRequest.session_id"));
+        } else
+          goto handle_unusual;
+        continue;
+      // map<string, string> metadata = 2 [json_name = "metadata"];
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
+          ptr -= 1;
+          do {
+            ptr += 1;
+            ptr = ctx->ParseMessage(&metadata_, ptr);
+            CHK_(ptr);
+            if (!ctx->DataAvailable(ptr)) break;
+          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<18>(ptr));
+        } else
+          goto handle_unusual;
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
   return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
 }
 
-
-PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
-const ::_pbi::TcParseTable<0, 2, 1, 66, 2> ReconnectRequest::_table_ = {
-  {
-    0,  // no _has_bits_
-    0, // no _extensions_
-    2, 0,  // max_field_number, fast_idx_mask
-    offsetof(decltype(_table_), field_lookup_table),
-    4294967292,  // skipmap
-    offsetof(decltype(_table_), field_entries),
-    2,  // num_field_entries
-    1,  // num_aux_entries
-    offsetof(decltype(_table_), aux_entries),
-    &_ReconnectRequest_default_instance_._instance,
-    ::_pbi::TcParser::GenericFallback,  // fallback
-  }, {{
-    // string session_id = 1 [json_name = "sessionId"];
-    {::_pbi::TcParser::FastUS1,
-     {10, 63, 0, PROTOBUF_FIELD_OFFSET(ReconnectRequest, _impl_.session_id_)}},
-  }}, {{
-    65535, 65535
-  }}, {{
-    // string session_id = 1 [json_name = "sessionId"];
-    {PROTOBUF_FIELD_OFFSET(ReconnectRequest, _impl_.session_id_), 0, 0,
-    (0 | ::_fl::kFcSingular | ::_fl::kUtf8String | ::_fl::kRepAString)},
-    // map<string, string> metadata = 2 [json_name = "metadata"];
-    {PROTOBUF_FIELD_OFFSET(ReconnectRequest, _impl_.metadata_), 0, 0,
-    (0 | ::_fl::kFcRepeated | ::_fl::kMap)},
-  }}, {{
-    {::_pbi::TcParser::GetMapAuxInfo<decltype(ReconnectRequest()._impl_.metadata_)>(1, 0, 0)},
-  }}, {{
-    "\47\12\10\0\0\0\0\0"
-    "longportapp.control.v1.ReconnectRequest"
-    "session_id"
-    "metadata"
-  }},
-};
-
-::uint8_t* ReconnectRequest::_InternalSerialize(
-    ::uint8_t* target,
-    ::google::protobuf::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:longportapp.control.v1.ReconnectRequest)
-  ::uint32_t cached_has_bits = 0;
-  (void)cached_has_bits;
+uint8_t* ReconnectRequest::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:longbridge.control.v1.ReconnectRequest)
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
 
   // string session_id = 1 [json_name = "sessionId"];
   if (!this->_internal_session_id().empty()) {
-    const std::string& _s = this->_internal_session_id();
-    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-        _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "longportapp.control.v1.ReconnectRequest.session_id");
-    target = stream->WriteStringMaybeAliased(1, _s, target);
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_session_id().data(), static_cast<int>(this->_internal_session_id().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "longbridge.control.v1.ReconnectRequest.session_id");
+    target = stream->WriteStringMaybeAliased(
+        1, this->_internal_session_id(), target);
   }
 
   // map<string, string> metadata = 2 [json_name = "metadata"];
-  if (!_internal_metadata().empty()) {
-    using MapType = ::google::protobuf::Map<std::string, std::string>;
+  if (!this->_internal_metadata().empty()) {
+    using MapType = ::_pb::Map<std::string, std::string>;
     using WireHelper = ReconnectRequest_MetadataEntry_DoNotUse::Funcs;
-    const auto& field = _internal_metadata();
+    const auto& map_field = this->_internal_metadata();
+    auto check_utf8 = [](const MapType::value_type& entry) {
+      (void)entry;
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+        entry.first.data(), static_cast<int>(entry.first.length()),
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+        "longbridge.control.v1.ReconnectRequest.MetadataEntry.key");
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+        entry.second.data(), static_cast<int>(entry.second.length()),
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+        "longbridge.control.v1.ReconnectRequest.MetadataEntry.value");
+    };
 
-    if (stream->IsSerializationDeterministic() && field.size() > 1) {
-      for (const auto& entry : ::google::protobuf::internal::MapSorterPtr<MapType>(field)) {
-        target = WireHelper::InternalSerialize(
-            2, entry.first, entry.second, target, stream);
-        ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-            entry.first.data(), static_cast<int>(entry.first.length()),
- ::google::protobuf::internal::WireFormatLite::SERIALIZE, "longportapp.control.v1.ReconnectRequest.metadata");
-        ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-            entry.second.data(), static_cast<int>(entry.second.length()),
- ::google::protobuf::internal::WireFormatLite::SERIALIZE, "longportapp.control.v1.ReconnectRequest.metadata");
+    if (stream->IsSerializationDeterministic() && map_field.size() > 1) {
+      for (const auto& entry : ::_pbi::MapSorterPtr<MapType>(map_field)) {
+        target = WireHelper::InternalSerialize(2, entry.first, entry.second, target, stream);
+        check_utf8(entry);
       }
     } else {
-      for (const auto& entry : field) {
-        target = WireHelper::InternalSerialize(
-            2, entry.first, entry.second, target, stream);
-        ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-            entry.first.data(), static_cast<int>(entry.first.length()),
- ::google::protobuf::internal::WireFormatLite::SERIALIZE, "longportapp.control.v1.ReconnectRequest.metadata");
-        ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-            entry.second.data(), static_cast<int>(entry.second.length()),
- ::google::protobuf::internal::WireFormatLite::SERIALIZE, "longportapp.control.v1.ReconnectRequest.metadata");
+      for (const auto& entry : map_field) {
+        target = WireHelper::InternalSerialize(2, entry.first, entry.second, target, stream);
+        check_utf8(entry);
       }
     }
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target =
-        ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-            _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance), target, stream);
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:longportapp.control.v1.ReconnectRequest)
+  // @@protoc_insertion_point(serialize_to_array_end:longbridge.control.v1.ReconnectRequest)
   return target;
 }
 
-::size_t ReconnectRequest::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:longportapp.control.v1.ReconnectRequest)
-  ::size_t total_size = 0;
+size_t ReconnectRequest::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:longbridge.control.v1.ReconnectRequest)
+  size_t total_size = 0;
 
-  ::uint32_t cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // map<string, string> metadata = 2 [json_name = "metadata"];
-  total_size += 1 * ::google::protobuf::internal::FromIntSize(_internal_metadata_size());
-  for (const auto& entry : _internal_metadata()) {
-    total_size += ReconnectRequest_MetadataEntry_DoNotUse::Funcs::ByteSizeLong(entry.first, entry.second);
+  total_size += 1 *
+      ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(this->_internal_metadata_size());
+  for (::PROTOBUF_NAMESPACE_ID::Map< std::string, std::string >::const_iterator
+      it = this->_internal_metadata().begin();
+      it != this->_internal_metadata().end(); ++it) {
+    total_size += ReconnectRequest_MetadataEntry_DoNotUse::Funcs::ByteSizeLong(it->first, it->second);
   }
+
   // string session_id = 1 [json_name = "sessionId"];
   if (!this->_internal_session_id().empty()) {
-    total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
-                                    this->_internal_session_id());
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_session_id());
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  return MaybeComputeUnknownFieldsSize(total_size, &_cached_size_);
 }
 
-const ::google::protobuf::Message::ClassData ReconnectRequest::_class_data_ = {
-    ::google::protobuf::Message::CopyWithSourceCheck,
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData ReconnectRequest::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSizeCheck,
     ReconnectRequest::MergeImpl
 };
-const ::google::protobuf::Message::ClassData*ReconnectRequest::GetClassData() const { return &_class_data_; }
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*ReconnectRequest::GetClassData() const { return &_class_data_; }
+
+void ReconnectRequest::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to,
+                      const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+  static_cast<ReconnectRequest *>(to)->MergeFrom(
+      static_cast<const ReconnectRequest &>(from));
+}
 
 
-void ReconnectRequest::MergeImpl(::google::protobuf::Message& to_msg, const ::google::protobuf::Message& from_msg) {
-  auto* const _this = static_cast<ReconnectRequest*>(&to_msg);
-  auto& from = static_cast<const ReconnectRequest&>(from_msg);
-  // @@protoc_insertion_point(class_specific_merge_from_start:longportapp.control.v1.ReconnectRequest)
-  ABSL_DCHECK_NE(&from, _this);
-  ::uint32_t cached_has_bits = 0;
+void ReconnectRequest::MergeFrom(const ReconnectRequest& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:longbridge.control.v1.ReconnectRequest)
+  GOOGLE_DCHECK_NE(&from, this);
+  uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  _this->_impl_.metadata_.MergeFrom(from._impl_.metadata_);
+  metadata_.MergeFrom(from.metadata_);
   if (!from._internal_session_id().empty()) {
-    _this->_internal_set_session_id(from._internal_session_id());
+    _internal_set_session_id(from._internal_session_id());
   }
-  _this->_internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void ReconnectRequest::CopyFrom(const ReconnectRequest& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:longportapp.control.v1.ReconnectRequest)
+// @@protoc_insertion_point(class_specific_copy_from_start:longbridge.control.v1.ReconnectRequest)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
-PROTOBUF_NOINLINE bool ReconnectRequest::IsInitialized() const {
+bool ReconnectRequest::IsInitialized() const {
   return true;
 }
 
@@ -1606,268 +1587,270 @@ void ReconnectRequest::InternalSwap(ReconnectRequest* other) {
   auto* lhs_arena = GetArenaForAllocation();
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  _impl_.metadata_.InternalSwap(&other->_impl_.metadata_);
-  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.session_id_, lhs_arena,
-                                       &other->_impl_.session_id_, rhs_arena);
+  metadata_.InternalSwap(&other->metadata_);
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &session_id_, lhs_arena,
+      &other->session_id_, rhs_arena
+  );
 }
 
-::google::protobuf::Metadata ReconnectRequest::GetMetadata() const {
+::PROTOBUF_NAMESPACE_ID::Metadata ReconnectRequest::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_control_2fcontrol_2eproto_getter, &descriptor_table_control_2fcontrol_2eproto_once,
       file_level_metadata_control_2fcontrol_2eproto[6]);
 }
+
 // ===================================================================
 
 class ReconnectResponse::_Internal {
  public:
 };
 
-ReconnectResponse::ReconnectResponse(::google::protobuf::Arena* arena)
-    : ::google::protobuf::Message(arena) {
-  SharedCtor(arena);
-  // @@protoc_insertion_point(arena_constructor:longportapp.control.v1.ReconnectResponse)
+ReconnectResponse::ReconnectResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor();
+  // @@protoc_insertion_point(arena_constructor:longbridge.control.v1.ReconnectResponse)
 }
-ReconnectResponse::ReconnectResponse(const ReconnectResponse& from) : ::google::protobuf::Message() {
-  ReconnectResponse* const _this = this;
-  (void)_this;
-  new (&_impl_) Impl_{
-      decltype(_impl_.session_id_){},
-      decltype(_impl_.expires_){},
-      decltype(_impl_.limit_){},
-      decltype(_impl_.online_){},
-      /*decltype(_impl_._cached_size_)*/ {},
-  };
-  _internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
-      from._internal_metadata_);
-  _impl_.session_id_.InitDefault();
+ReconnectResponse::ReconnectResponse(const ReconnectResponse& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  session_id_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-        _impl_.session_id_.Set("", GetArenaForAllocation());
-  #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    session_id_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (!from._internal_session_id().empty()) {
-    _this->_impl_.session_id_.Set(from._internal_session_id(), _this->GetArenaForAllocation());
+    session_id_.Set(from._internal_session_id(), 
+      GetArenaForAllocation());
   }
-  ::memcpy(&_impl_.expires_, &from._impl_.expires_,
-    static_cast<::size_t>(reinterpret_cast<char*>(&_impl_.online_) -
-    reinterpret_cast<char*>(&_impl_.expires_)) + sizeof(_impl_.online_));
+  ::memcpy(&expires_, &from.expires_,
+    static_cast<size_t>(reinterpret_cast<char*>(&online_) -
+    reinterpret_cast<char*>(&expires_)) + sizeof(online_));
+  // @@protoc_insertion_point(copy_constructor:longbridge.control.v1.ReconnectResponse)
+}
 
-  // @@protoc_insertion_point(copy_constructor:longportapp.control.v1.ReconnectResponse)
+inline void ReconnectResponse::SharedCtor() {
+session_id_.InitDefault();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  session_id_.Set("", GetArenaForAllocation());
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
+    reinterpret_cast<char*>(&expires_) - reinterpret_cast<char*>(this)),
+    0, static_cast<size_t>(reinterpret_cast<char*>(&online_) -
+    reinterpret_cast<char*>(&expires_)) + sizeof(online_));
 }
-inline void ReconnectResponse::SharedCtor(::_pb::Arena* arena) {
-  (void)arena;
-  new (&_impl_) Impl_{
-      decltype(_impl_.session_id_){},
-      decltype(_impl_.expires_){::int64_t{0}},
-      decltype(_impl_.limit_){0u},
-      decltype(_impl_.online_){0u},
-      /*decltype(_impl_._cached_size_)*/ {},
-  };
-  _impl_.session_id_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-        _impl_.session_id_.Set("", GetArenaForAllocation());
-  #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-}
+
 ReconnectResponse::~ReconnectResponse() {
-  // @@protoc_insertion_point(destructor:longportapp.control.v1.ReconnectResponse)
-  _internal_metadata_.Delete<::google::protobuf::UnknownFieldSet>();
+  // @@protoc_insertion_point(destructor:longbridge.control.v1.ReconnectResponse)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
 }
+
 inline void ReconnectResponse::SharedDtor() {
-  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.session_id_.Destroy();
-}
-void ReconnectResponse::SetCachedSize(int size) const {
-  _impl_._cached_size_.Set(size);
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+  session_id_.Destroy();
 }
 
-PROTOBUF_NOINLINE void ReconnectResponse::Clear() {
-// @@protoc_insertion_point(message_clear_start:longportapp.control.v1.ReconnectResponse)
-  ::uint32_t cached_has_bits = 0;
+void ReconnectResponse::SetCachedSize(int size) const {
+  _cached_size_.Set(size);
+}
+
+void ReconnectResponse::Clear() {
+// @@protoc_insertion_point(message_clear_start:longbridge.control.v1.ReconnectResponse)
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.session_id_.ClearToEmpty();
-  ::memset(&_impl_.expires_, 0, static_cast<::size_t>(
-      reinterpret_cast<char*>(&_impl_.online_) -
-      reinterpret_cast<char*>(&_impl_.expires_)) + sizeof(_impl_.online_));
-  _internal_metadata_.Clear<::google::protobuf::UnknownFieldSet>();
+  session_id_.ClearToEmpty();
+  ::memset(&expires_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&online_) -
+      reinterpret_cast<char*>(&expires_)) + sizeof(online_));
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* ReconnectResponse::_InternalParse(
-    const char* ptr, ::_pbi::ParseContext* ctx) {
-  ptr = ::_pbi::TcParser::ParseLoop(this, ptr, ctx, &_table_.header);
+const char* ReconnectResponse::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // string session_id = 1 [json_name = "sessionId"];
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
+          auto str = _internal_mutable_session_id();
+          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(ptr);
+          CHK_(::_pbi::VerifyUTF8(str, "longbridge.control.v1.ReconnectResponse.session_id"));
+        } else
+          goto handle_unusual;
+        continue;
+      // int64 expires = 2 [json_name = "expires"];
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
+          expires_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // uint32 limit = 3 [json_name = "limit"];
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
+          limit_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // uint32 online = 4 [json_name = "online"];
+      case 4:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 32)) {
+          online_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
   return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
 }
 
-
-PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
-const ::_pbi::TcParseTable<2, 4, 0, 59, 2> ReconnectResponse::_table_ = {
-  {
-    0,  // no _has_bits_
-    0, // no _extensions_
-    4, 24,  // max_field_number, fast_idx_mask
-    offsetof(decltype(_table_), field_lookup_table),
-    4294967280,  // skipmap
-    offsetof(decltype(_table_), field_entries),
-    4,  // num_field_entries
-    0,  // num_aux_entries
-    offsetof(decltype(_table_), field_names),  // no aux_entries
-    &_ReconnectResponse_default_instance_._instance,
-    ::_pbi::TcParser::GenericFallback,  // fallback
-  }, {{
-    // uint32 online = 4 [json_name = "online"];
-    {::_pbi::TcParser::SingularVarintNoZag1<::uint32_t, offsetof(ReconnectResponse, _impl_.online_), 63>(),
-     {32, 63, 0, PROTOBUF_FIELD_OFFSET(ReconnectResponse, _impl_.online_)}},
-    // string session_id = 1 [json_name = "sessionId"];
-    {::_pbi::TcParser::FastUS1,
-     {10, 63, 0, PROTOBUF_FIELD_OFFSET(ReconnectResponse, _impl_.session_id_)}},
-    // int64 expires = 2 [json_name = "expires"];
-    {::_pbi::TcParser::SingularVarintNoZag1<::uint64_t, offsetof(ReconnectResponse, _impl_.expires_), 63>(),
-     {16, 63, 0, PROTOBUF_FIELD_OFFSET(ReconnectResponse, _impl_.expires_)}},
-    // uint32 limit = 3 [json_name = "limit"];
-    {::_pbi::TcParser::SingularVarintNoZag1<::uint32_t, offsetof(ReconnectResponse, _impl_.limit_), 63>(),
-     {24, 63, 0, PROTOBUF_FIELD_OFFSET(ReconnectResponse, _impl_.limit_)}},
-  }}, {{
-    65535, 65535
-  }}, {{
-    // string session_id = 1 [json_name = "sessionId"];
-    {PROTOBUF_FIELD_OFFSET(ReconnectResponse, _impl_.session_id_), 0, 0,
-    (0 | ::_fl::kFcSingular | ::_fl::kUtf8String | ::_fl::kRepAString)},
-    // int64 expires = 2 [json_name = "expires"];
-    {PROTOBUF_FIELD_OFFSET(ReconnectResponse, _impl_.expires_), 0, 0,
-    (0 | ::_fl::kFcSingular | ::_fl::kInt64)},
-    // uint32 limit = 3 [json_name = "limit"];
-    {PROTOBUF_FIELD_OFFSET(ReconnectResponse, _impl_.limit_), 0, 0,
-    (0 | ::_fl::kFcSingular | ::_fl::kUInt32)},
-    // uint32 online = 4 [json_name = "online"];
-    {PROTOBUF_FIELD_OFFSET(ReconnectResponse, _impl_.online_), 0, 0,
-    (0 | ::_fl::kFcSingular | ::_fl::kUInt32)},
-  }},
-  // no aux_entries
-  {{
-    "\50\12\0\0\0\0\0\0"
-    "longportapp.control.v1.ReconnectResponse"
-    "session_id"
-  }},
-};
-
-::uint8_t* ReconnectResponse::_InternalSerialize(
-    ::uint8_t* target,
-    ::google::protobuf::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:longportapp.control.v1.ReconnectResponse)
-  ::uint32_t cached_has_bits = 0;
-  (void)cached_has_bits;
+uint8_t* ReconnectResponse::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:longbridge.control.v1.ReconnectResponse)
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
 
   // string session_id = 1 [json_name = "sessionId"];
   if (!this->_internal_session_id().empty()) {
-    const std::string& _s = this->_internal_session_id();
-    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-        _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "longportapp.control.v1.ReconnectResponse.session_id");
-    target = stream->WriteStringMaybeAliased(1, _s, target);
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_session_id().data(), static_cast<int>(this->_internal_session_id().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "longbridge.control.v1.ReconnectResponse.session_id");
+    target = stream->WriteStringMaybeAliased(
+        1, this->_internal_session_id(), target);
   }
 
   // int64 expires = 2 [json_name = "expires"];
   if (this->_internal_expires() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::
-        WriteInt64ToArrayWithField<2>(
-            stream, this->_internal_expires(), target);
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(2, this->_internal_expires(), target);
   }
 
   // uint32 limit = 3 [json_name = "limit"];
   if (this->_internal_limit() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(
-        3, this->_internal_limit(), target);
+    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(3, this->_internal_limit(), target);
   }
 
   // uint32 online = 4 [json_name = "online"];
   if (this->_internal_online() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(
-        4, this->_internal_online(), target);
+    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(4, this->_internal_online(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target =
-        ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-            _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance), target, stream);
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:longportapp.control.v1.ReconnectResponse)
+  // @@protoc_insertion_point(serialize_to_array_end:longbridge.control.v1.ReconnectResponse)
   return target;
 }
 
-::size_t ReconnectResponse::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:longportapp.control.v1.ReconnectResponse)
-  ::size_t total_size = 0;
+size_t ReconnectResponse::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:longbridge.control.v1.ReconnectResponse)
+  size_t total_size = 0;
 
-  ::uint32_t cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // string session_id = 1 [json_name = "sessionId"];
   if (!this->_internal_session_id().empty()) {
-    total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
-                                    this->_internal_session_id());
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_session_id());
   }
 
   // int64 expires = 2 [json_name = "expires"];
   if (this->_internal_expires() != 0) {
-    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(
-        this->_internal_expires());
+    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_expires());
   }
 
   // uint32 limit = 3 [json_name = "limit"];
   if (this->_internal_limit() != 0) {
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(
-        this->_internal_limit());
+    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_limit());
   }
 
   // uint32 online = 4 [json_name = "online"];
   if (this->_internal_online() != 0) {
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(
-        this->_internal_online());
+    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_online());
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  return MaybeComputeUnknownFieldsSize(total_size, &_cached_size_);
 }
 
-const ::google::protobuf::Message::ClassData ReconnectResponse::_class_data_ = {
-    ::google::protobuf::Message::CopyWithSourceCheck,
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData ReconnectResponse::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSizeCheck,
     ReconnectResponse::MergeImpl
 };
-const ::google::protobuf::Message::ClassData*ReconnectResponse::GetClassData() const { return &_class_data_; }
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*ReconnectResponse::GetClassData() const { return &_class_data_; }
+
+void ReconnectResponse::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to,
+                      const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+  static_cast<ReconnectResponse *>(to)->MergeFrom(
+      static_cast<const ReconnectResponse &>(from));
+}
 
 
-void ReconnectResponse::MergeImpl(::google::protobuf::Message& to_msg, const ::google::protobuf::Message& from_msg) {
-  auto* const _this = static_cast<ReconnectResponse*>(&to_msg);
-  auto& from = static_cast<const ReconnectResponse&>(from_msg);
-  // @@protoc_insertion_point(class_specific_merge_from_start:longportapp.control.v1.ReconnectResponse)
-  ABSL_DCHECK_NE(&from, _this);
-  ::uint32_t cached_has_bits = 0;
+void ReconnectResponse::MergeFrom(const ReconnectResponse& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:longbridge.control.v1.ReconnectResponse)
+  GOOGLE_DCHECK_NE(&from, this);
+  uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   if (!from._internal_session_id().empty()) {
-    _this->_internal_set_session_id(from._internal_session_id());
+    _internal_set_session_id(from._internal_session_id());
   }
   if (from._internal_expires() != 0) {
-    _this->_internal_set_expires(from._internal_expires());
+    _internal_set_expires(from._internal_expires());
   }
   if (from._internal_limit() != 0) {
-    _this->_internal_set_limit(from._internal_limit());
+    _internal_set_limit(from._internal_limit());
   }
   if (from._internal_online() != 0) {
-    _this->_internal_set_online(from._internal_online());
+    _internal_set_online(from._internal_online());
   }
-  _this->_internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void ReconnectResponse::CopyFrom(const ReconnectResponse& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:longportapp.control.v1.ReconnectResponse)
+// @@protoc_insertion_point(class_specific_copy_from_start:longbridge.control.v1.ReconnectResponse)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
-PROTOBUF_NOINLINE bool ReconnectResponse::IsInitialized() const {
+bool ReconnectResponse::IsInitialized() const {
   return true;
 }
 
@@ -1876,28 +1859,62 @@ void ReconnectResponse::InternalSwap(ReconnectResponse* other) {
   auto* lhs_arena = GetArenaForAllocation();
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.session_id_, lhs_arena,
-                                       &other->_impl_.session_id_, rhs_arena);
-  ::google::protobuf::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(ReconnectResponse, _impl_.online_)
-      + sizeof(ReconnectResponse::_impl_.online_)
-      - PROTOBUF_FIELD_OFFSET(ReconnectResponse, _impl_.expires_)>(
-          reinterpret_cast<char*>(&_impl_.expires_),
-          reinterpret_cast<char*>(&other->_impl_.expires_));
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &session_id_, lhs_arena,
+      &other->session_id_, rhs_arena
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(ReconnectResponse, online_)
+      + sizeof(ReconnectResponse::online_)
+      - PROTOBUF_FIELD_OFFSET(ReconnectResponse, expires_)>(
+          reinterpret_cast<char*>(&expires_),
+          reinterpret_cast<char*>(&other->expires_));
 }
 
-::google::protobuf::Metadata ReconnectResponse::GetMetadata() const {
+::PROTOBUF_NAMESPACE_ID::Metadata ReconnectResponse::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_control_2fcontrol_2eproto_getter, &descriptor_table_control_2fcontrol_2eproto_once,
       file_level_metadata_control_2fcontrol_2eproto[7]);
 }
+
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace v1
 }  // namespace control
-}  // namespace longportapp
-namespace google {
-namespace protobuf {
-}  // namespace protobuf
-}  // namespace google
+}  // namespace longbridge
+PROTOBUF_NAMESPACE_OPEN
+template<> PROTOBUF_NOINLINE ::longbridge::control::v1::Close*
+Arena::CreateMaybeMessage< ::longbridge::control::v1::Close >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::longbridge::control::v1::Close >(arena);
+}
+template<> PROTOBUF_NOINLINE ::longbridge::control::v1::Heartbeat*
+Arena::CreateMaybeMessage< ::longbridge::control::v1::Heartbeat >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::longbridge::control::v1::Heartbeat >(arena);
+}
+template<> PROTOBUF_NOINLINE ::longbridge::control::v1::AuthRequest_MetadataEntry_DoNotUse*
+Arena::CreateMaybeMessage< ::longbridge::control::v1::AuthRequest_MetadataEntry_DoNotUse >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::longbridge::control::v1::AuthRequest_MetadataEntry_DoNotUse >(arena);
+}
+template<> PROTOBUF_NOINLINE ::longbridge::control::v1::AuthRequest*
+Arena::CreateMaybeMessage< ::longbridge::control::v1::AuthRequest >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::longbridge::control::v1::AuthRequest >(arena);
+}
+template<> PROTOBUF_NOINLINE ::longbridge::control::v1::AuthResponse*
+Arena::CreateMaybeMessage< ::longbridge::control::v1::AuthResponse >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::longbridge::control::v1::AuthResponse >(arena);
+}
+template<> PROTOBUF_NOINLINE ::longbridge::control::v1::ReconnectRequest_MetadataEntry_DoNotUse*
+Arena::CreateMaybeMessage< ::longbridge::control::v1::ReconnectRequest_MetadataEntry_DoNotUse >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::longbridge::control::v1::ReconnectRequest_MetadataEntry_DoNotUse >(arena);
+}
+template<> PROTOBUF_NOINLINE ::longbridge::control::v1::ReconnectRequest*
+Arena::CreateMaybeMessage< ::longbridge::control::v1::ReconnectRequest >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::longbridge::control::v1::ReconnectRequest >(arena);
+}
+template<> PROTOBUF_NOINLINE ::longbridge::control::v1::ReconnectResponse*
+Arena::CreateMaybeMessage< ::longbridge::control::v1::ReconnectResponse >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::longbridge::control::v1::ReconnectResponse >(arena);
+}
+PROTOBUF_NAMESPACE_CLOSE
+
 // @@protoc_insertion_point(global_scope)
-#include "google/protobuf/port_undef.inc"
+#include <google/protobuf/port_undef.inc>
