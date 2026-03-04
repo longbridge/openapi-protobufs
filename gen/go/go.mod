@@ -1,4 +1,4 @@
-module github.com/longportapp/openapi-protobufs/gen/go
+module github.com/longbridge/openapi-protobufs/gen/go
 
 go 1.20
 

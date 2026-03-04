@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-package longportapp.control.v1;
+package longbridge.control.v1;
 
 message Error {
   uint64 code = 1;

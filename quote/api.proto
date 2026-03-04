@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-package longportapp.quote.v1;
+package longbridge.quote.v1;
 
 // 协议指令定义
 enum Command {
