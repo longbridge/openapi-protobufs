@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package longbridge.control.v1;
 
-// control command, see document: https://open.longbridgeapp.com/docs/socket/control-command
+// control command, see document: https://open.longbridge.com/docs/socket/control-command
 enum Command {
   CMD_CLOSE = 0;
   CMD_HEARTBEAT = 1;

@@ -25,7 +25,7 @@ const (
 // of the legacy proto package is being used.
 const _ = proto.ProtoPackageIsVersion4
 
-// control command, see document: https://open.longbridgeapp.com/docs/socket/control-command
+// control command, see document: https://open.longbridge.com/docs/socket/control-command
 type Command int32
 
 const (

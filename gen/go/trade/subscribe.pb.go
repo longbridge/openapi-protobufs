@@ -25,7 +25,7 @@ const (
 // of the legacy proto package is being used.
 const _ = proto.ProtoPackageIsVersion4
 
-// trade gateway command, see: https://open.longbridgeapp.com/docs/trade/trade-push
+// trade gateway command, see: https://open.longbridge.com/docs/trade/trade-push
 type Command int32
 
 const (
